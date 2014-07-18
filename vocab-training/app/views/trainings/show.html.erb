@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word,:</strong>
+  <%= @training.word, %>
+</p>
+
+<p>
+  <strong>Training number:</strong>
+  <%= @training.training_number %>
+</p>
+
+<p>
+  <strong>Trials:</strong>
+  <%= @training.trials %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @training.time %>
+</p>
+
+<%= link_to 'Edit', edit_training_path(@training) %> |
+<%= link_to 'Back', trainings_path %>

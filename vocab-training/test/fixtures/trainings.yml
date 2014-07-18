@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word,: MyString
+  training_number: 
+  trials: 
+  time: 1.5
+
+two:
+  word,: MyString
+  training_number: 
+  trials: 
+  time: 1.5
