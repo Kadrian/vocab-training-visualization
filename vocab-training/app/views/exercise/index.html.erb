@@ -1,0 +1,44 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8 text-center">
+			<h1>TRAINING SET</h1>
+
+			<form class="form-inline">
+				<input id="slider" type="text" class="span4" value="" data-slider-id="vocab-slide">
+				<input type="text" id="min" class="form-control vals">
+				<input type="text" id="max" class="form-control vals">
+			</form>
+
+			<form id="start-form" class="form-inline">
+				<p id="numwords-label"></p>
+				<button id="start" type="button" class="btn btn-primary">Start</button>
+			</form>
+
+
+			<h1 id="exercise">EXERCISE</h1>
+			<div class="progress">
+			  	<div id="exercise-correct" class="progress-bar progress-bar-success" role="progressbar" style="width:0%;"></div>
+				<div id="exercise-wrong"class="progress-bar progress-bar-danger" role="progressbar" style="width:0%"></div>
+			</div>
+			<h2 id="question" class="text-center"></h2>
+
+			<form class="form-horizontal">
+				<div id="answer-form" class="form-group">
+					<input id="answer" autocomplete="off" type="text" disabled="true" class="span5 form-control input-lg"/>	
+				</div>
+			</form>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="history" class="text-left"></div>
+				</div>
+				<div class="col-sm-6">
+					<div id="problems" class="text-left"></div>
+				</div>
+			</div>
+
+		</div>	
+		<div class="col-sm-2"></div>
+	</div>	
+</div>	

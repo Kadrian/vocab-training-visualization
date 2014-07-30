@@ -69,6 +69,6 @@ class TrainingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def training_params
-      params.require(:training).permit(:word,, :training_number, :trials, :time)
+      params.require(:training).permit(:word, :training_number, :trials, :time)
     end
 end

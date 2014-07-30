@@ -1,0 +1,71 @@
+// Place all the styles related to the Exercise controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#question{
+	margin-top:20px;
+}
+
+.vals{
+	width:70px !important;
+}
+
+#answer{
+	width:100%;
+	margin:0 auto;
+}
+#answer-form{
+	margin: 10px auto;
+	margin-top:0;
+}
+
+#vocab-slide{
+	width:700px;
+	margin: 20px auto;
+	margin-right: 20px;
+}
+.slider-disabled{
+	.slider-selection{
+		background:#AAA !important;
+	}
+	.slider-handle{
+		background:#999 !important;
+	}
+}
+#vocab-slide .slider-selection{
+	background:#0e90d2;
+}
+#vocab-slide .slider-handle{
+	background:#0066cc;
+	outline:none;
+}
+
+#numwords-label{
+	margin:0 20px;
+	display:inline-block;
+	font-size:34px;
+	width:205px;
+	vertical-align:middle;
+	text-align:right;
+}
+
+#start{
+	width:100px;
+	outline:none;
+}
+
+#start-form{
+	margin:10px auto;
+}
+
+#exercise{
+	margin-top:100px;
+}
+
+#history{
+	p{
+		font-size: 20px;
+		margin: 5px 0;
+	}
+}
