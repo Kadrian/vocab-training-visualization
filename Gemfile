@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
 
 gem 'composite_primary_keys', '~> 7.0.2'
+
+ruby "2.1.2"
