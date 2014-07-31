@@ -70,6 +70,20 @@
 	}
 }
 
+#report{
+	p{
+		font-size: 20px;
+		margin: 5px 0;
+	}
+	h3{
+		margin: 5px 0;
+	}
+}
+
+.progress{
+	overflow:visible;
+}
+
 .progress-bar {
 	color: white;
     overflow-x:visible;
@@ -78,5 +92,15 @@
 
 #exercise-label{
 	float:left;
+	position:absolute;
 	margin-left:5px;	
+}
+
+#alert-msg{
+	vertical-align:middle;
+	font-size:20px;
+}
+
+#awesome-btn{
+	outline:none;
 }

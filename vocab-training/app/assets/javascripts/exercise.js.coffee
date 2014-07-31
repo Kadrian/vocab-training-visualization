@@ -10,7 +10,21 @@ historyLength = 10
 # ------------------------
 # TRAINING
 # ------------------------
+finishTraining = () ->
+    # TODO: Do some more awesome stuff like saving everything
+    abortTraining()
+
 startTraining = () ->
+    # UI
+    $("#min").prop('disabled', true)
+    $("#max").prop('disabled', true)
+    $("#answer").prop('disabled', false)
+    $("#slider").slider('disable')
+    $("#start").html('Cancel')
+    $("#start").removeClass('btn-primary')
+    $('#answer').focus()
+
+    # TRAINING
     range = $('#slider').data('slider').getValue()
     window.words = window.vocab.slice(range[0], range[1])
     window.trainingAmount = window.words.length
@@ -21,6 +35,17 @@ startTraining = () ->
     enterReadyPhase()
 
 abortTraining = () ->
+    # UI    
+    $("#min").prop('disabled', false)
+    $("#max").prop('disabled', false)
+    $('#answer-form').show()
+    $("#answer").prop('disabled', true)
+    $("#slider").slider('enable')
+    $('.alert').hide()
+    $("#start").html('Start')
+    $("#start").addClass('btn-primary')
+
+    # TRAINING
     resetExerciseProgress()
     $('#question').html(" ")
     $('#history').html("")
@@ -39,11 +64,14 @@ endTraining = () ->
             eng = w["eng"].join(' | ')
             report = $('<p></p>').html(jap + " - " + eng)
             $('#report').append(report)
+
+        $('#answer-form').hide()
+        $('.alert').show()
     else
         # START REPETITION
         window.repetitionPhase = true
-        window.words = $.extend(true, [], window.repeatWords); 
-        enterReadyPhase()
+        window.words = $.extend(true, [], window.repeatWords)
+        nextWord()
 
 enterReadyPhase = () ->
     window.readyphase = true
@@ -75,7 +103,8 @@ submitAnswer = (answer) ->
             # TODO: SAVE ALL SORTS OF STATISTICS
             $('#answer-form').removeClass('has-error').addClass('has-success')
 
-            updateExerciseProgress()
+            if not window.repetitionPhase
+                updateExerciseProgress()
             pushHistory(answer, true)
             nextWord()
             return
@@ -108,6 +137,7 @@ handleWrong = (answer) ->
 nextWord = () ->
     if window.words.length == 0
         endTraining()
+        return
 
     window.word = removeRandom(window.words)
     window.word["trials"] = 1
@@ -132,37 +162,22 @@ resetExerciseProgress = ->
     setExerciseProgress(0.0, 0.0, 0, 0, true);
 
 setExerciseProgress = (correctness, wrongness, correct, wrong, reset) ->
-    correctPercent = Math.round(correctness * 100)
-    wrongPercent = Math.round(wrongness * 100)
+    correctPercent = (correctness * 100).toFixed(2)
+    wrongPercent = (wrongness * 100).toFixed(2) 
+    total = (correctness * 100 + wrongness * 100).toFixed(2)
 
-    if correctPercent > 1 or reset
+    if reset or correctPercent != 0.0
         $(progressCorrect).css('width', correctPercent + '%')
-        if reset
-            $(progressCorrect).html('')
-        else
-            $(progressCorrect).html(correct)
-
-    if wrongPercent > 1 or reset
+    if reset or wrongPercent != 0.0
         $(progressWrong).css('width', wrongPercent + '%')
-        if reset
-            $(progressWrong).html('')
-        else
-            $(progressWrong).html(wrong)
-
-    # Progress bars automatically transition
-    $(progressCorrect).one($.support.transition.end, ->
-        adjustColorOfProgressElement(progressCorrect, 55)
-    )
-    $(progressWrong).one($.support.transition.end, ->
-        adjustColorOfProgressElement(progressWrong, 55)
-    )
-    $('#exercise-label').html((correctPercent + wrongPercent) + '%')
-        
-adjustColorOfProgressElement = (element, switchWidth) ->
-    if $(element).width() > switchWidth
-        $(element).css('color', 'white')
+    if reset
+        $(progressCorrect).html('')
+        $(progressWrong).html('')
     else
-        $(element).css('color', 'black')
+        $(progressCorrect).html(correct)
+        $(progressWrong).html(wrong)
+
+    $('#exercise-label').html(total + '%')        
 
 # ----------------------
 # HISTORY
@@ -263,7 +278,11 @@ setupSliderInput = (numVocab) ->
         updateLabelRange(range)
     )
 
+# ------------------------
+# MAIN
+# ------------------------
 $ ->
+    # LOAD VOCABULARY
     $.ajax '/exercise/vocab',
         type: 'GET'
         dataType: 'json'
@@ -278,26 +297,15 @@ $ ->
             else
                 console.log "ERROR: You need at least 10 Words in your vocabulary."
 
+    # HANDLE CLICKS / KEYS
     $('#start').click ->
         if $(@).html() == "Start"
-            $("#min").prop('disabled', true)
-            $("#max").prop('disabled', true)
-            $("#answer").prop('disabled', false)
-            $("#slider").slider('disable')
-            $(@).html('Cancel')
-            $(@).removeClass('btn-primary')
-            $('#answer').focus()
-
             startTraining()
         else
-            $("#min").prop('disabled', false)
-            $("#max").prop('disabled', false)
-            $("#answer").prop('disabled', true)
-            $("#slider").slider('enable')
-            $(@).html('Start')
-            $(@).addClass('btn-primary')
-
             abortTraining()
+
+    $('#awesome-btn').click ->
+        finishTraining()
 
     $('#answer').keypress( (e) ->
         if(e.keyCode == 13) # ENTER KEY PRESSED
