@@ -15,16 +15,35 @@ startTraining = () ->
     window.words = window.vocab.slice(range[0], range[1])
     window.trainingAmount = window.words.length
     window.repeatWords = []
+    window.repetitionPhase = false
 
     resetExerciseProgress()
     enterReadyPhase()
 
-stopTraining = () ->
+abortTraining = () ->
     resetExerciseProgress()
     $('#question').html(" ")
     $('#history').html("")
+    $('#report').html("")
+    $('#answer').val("")
     $('#answer-form').removeClass("has-error").removeClass('has-success')
     $('#question').css('color', 'black')
+
+endTraining = () ->
+    if window.repetitionPhase
+        # END TRAINING
+        report = $('<h3></h3>').html("PROBLEMS WERE")
+        $('#report').append(report)
+        for w in window.repeatWords
+            jap = w["jap"].join(' | ')
+            eng = w["eng"].join(' | ')
+            report = $('<p></p>').html(jap + " - " + eng)
+            $('#report').append(report)
+    else
+        # START REPETITION
+        window.repetitionPhase = true
+        window.words = $.extend(true, [], window.repeatWords); 
+        enterReadyPhase()
 
 enterReadyPhase = () ->
     window.readyphase = true
@@ -33,6 +52,7 @@ enterReadyPhase = () ->
 exitReadyPhase = () ->
     window.readyphase = false
     $('#answer').attr('placeholder', '')
+    $('#answer').val('')
     $('#answer-form').removeClass("has-error").removeClass('has-success')
     $('#question').css('color', 'black')
 
@@ -62,19 +82,23 @@ submitAnswer = (answer) ->
 
     $('#answer-form').removeClass('has-success').addClass('has-error')
 
-    handleRepeat(answer)
+    handleWrong(answer)
 
 
-handleRepeat = (answer) ->
+handleWrong = (answer) ->
     window.trials++
     window.word["trials"]++
 
     if window.word["trials"] > allowedTrials
-        window.repeatWords.push(window.word)
-
         $('#answer-form').removeClass('has-error')
         $('#question').css('color', 'red')
-        updateExerciseProgress()
+
+        if window.repetitionPhase
+            window.words.push(window.word)
+        else
+            window.repeatWords.push(window.word)
+            updateExerciseProgress()
+
         pushHistory(answer, false, window.word['jap'].join(' or '))
         enterReadyPhase()
         return
@@ -82,6 +106,9 @@ handleRepeat = (answer) ->
     pushHistory(answer, false)
 
 nextWord = () ->
+    if window.words.length == 0
+        endTraining()
+
     window.word = removeRandom(window.words)
     window.word["trials"] = 1
     
@@ -99,19 +126,43 @@ updateExerciseProgress = ->
     wrong = window.repeatWords.length 
     correct = window.trainingAmount - window.words.length - wrong
 
-    setExerciseProgress(correctness, wrongness, correct, wrong)
+    setExerciseProgress(correctness, wrongness, correct, wrong, false)
 
 resetExerciseProgress = ->
-    setExerciseProgress(0.0, 0.0, 0, 0);
+    setExerciseProgress(0.0, 0.0, 0, 0, true);
 
-setExerciseProgress = (correctness, wrongness, correct, wrong) ->
+setExerciseProgress = (correctness, wrongness, correct, wrong, reset) ->
     correctPercent = Math.round(correctness * 100)
     wrongPercent = Math.round(wrongness * 100)
 
-    $(progressCorrect).css('width', correctPercent + '%')
-    $(progressCorrect).html(correct + ' - ' + correctPercent + '%')
-    $(progressWrong).css('width', wrongPercent + '%')
-    $(progressWrong).html(wrong + ' - '+ wrongPercent + '%')
+    if correctPercent > 1 or reset
+        $(progressCorrect).css('width', correctPercent + '%')
+        if reset
+            $(progressCorrect).html('')
+        else
+            $(progressCorrect).html(correct)
+
+    if wrongPercent > 1 or reset
+        $(progressWrong).css('width', wrongPercent + '%')
+        if reset
+            $(progressWrong).html('')
+        else
+            $(progressWrong).html(wrong)
+
+    # Progress bars automatically transition
+    $(progressCorrect).one($.support.transition.end, ->
+        adjustColorOfProgressElement(progressCorrect, 55)
+    )
+    $(progressWrong).one($.support.transition.end, ->
+        adjustColorOfProgressElement(progressWrong, 55)
+    )
+    $('#exercise-label').html((correctPercent + wrongPercent) + '%')
+        
+adjustColorOfProgressElement = (element, switchWidth) ->
+    if $(element).width() > switchWidth
+        $(element).css('color', 'white')
+    else
+        $(element).css('color', 'black')
 
 # ----------------------
 # HISTORY
@@ -246,7 +297,7 @@ $ ->
             $(@).html('Start')
             $(@).addClass('btn-primary')
 
-            stopTraining()
+            abortTraining()
 
     $('#answer').keypress( (e) ->
         if(e.keyCode == 13) # ENTER KEY PRESSED
