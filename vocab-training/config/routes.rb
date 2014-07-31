@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'exercise' => 'exercise#index'
   get 'exercise/vocab' => 'exercise#vocab'
+  post 'exercise/finish' => 'exercise#finish'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

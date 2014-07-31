@@ -12,6 +12,15 @@ historyLength = 10
 # ------------------------
 finishTraining = () ->
     # TODO: Do some more awesome stuff like saving everything
+    $.ajax '/exercise/finished',
+        type: 'POST'
+        dataType: 'json'
+        data: data
+        error: (jqXHR, textStatus, errorThrown) ->
+            console.log "AJAX Error: #{textStatus}"
+        success: (data, textStatus, jqXHR) ->
+            console.log "Successfully saved your results."
+            
     abortTraining()
 
 startTraining = () ->

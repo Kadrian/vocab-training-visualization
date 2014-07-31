@@ -1,3 +1,3 @@
 class Training < ActiveRecord::Base
-	belongs_to :word, :foreign_key => [:jap, :eng]
+	belongs_to :word
 end
