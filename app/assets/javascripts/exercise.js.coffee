@@ -20,8 +20,8 @@ finishTraining = () ->
 
     $.ajax '/exercise/finish',
         type: 'POST'
-        dataType: 'json'
-        data: payload 
+        contentType: "application/json"
+        data: JSON.stringify(payload)
         error: (jqXHR, textStatus, errorThrown) ->
             console.log "AJAX Error: #{textStatus}"
         success: (data, textStatus, jqXHR) ->
@@ -60,6 +60,7 @@ abortTraining = () ->
     $('.alert').hide()
     $("#start").html('Start')
     $("#start").addClass('btn-primary')
+    $("#answer").attr('placeholder', '')
 
     # TRAINING
     resetExerciseProgress()
@@ -201,11 +202,12 @@ setExerciseProgress = (correctness, wrongness, correct, wrong, reset) ->
     if reset
         $(progressCorrect).html('')
         $(progressWrong).html('')
+        $('#exercise-label').html('')        
     else
         $(progressCorrect).html(correct)
         $(progressWrong).html(wrong)
+        $('#exercise-label').html(total + '%')        
 
-    $('#exercise-label').html(total + '%')        
 
 # ----------------------
 # HISTORY

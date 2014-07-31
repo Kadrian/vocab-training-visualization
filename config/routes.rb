@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
-  put 'upload' => 'welcome#upload'
+  # root 'welcome#index'
+  # put 'upload' => 'welcome#upload'
+  root 'exercise#index'
 
-  get 'exercise' => 'exercise#index'
   get 'exercise/vocab' => 'exercise#vocab'
   post 'exercise/finish' => 'exercise#finish'
 

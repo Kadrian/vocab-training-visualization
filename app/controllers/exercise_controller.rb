@@ -15,7 +15,7 @@ class ExerciseController < ApplicationController
 		training_number = @training.training_number + 1
 	end
 
-	data.each do |key, training|
+	for training in data
 		word = Word.where({:eng => training["eng"].join('|'), :jap => training["jap"].join('|')}).first
 
 		if word
@@ -32,7 +32,9 @@ class ExerciseController < ApplicationController
 
 	end
 
-	render :nothing => true
+	respond_to do |format|
+		format.json { head :no_content }
+	end
   end
 
   # NOT USED AT THE MOMENT - GOOD FOR TESTING
