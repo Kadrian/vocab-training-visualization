@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 20140718133544) do
   enable_extension "plpgsql"
 
   create_table "trainings", force: true do |t|
-    t.string   "word"
+    t.integer  "word_id"
     t.integer  "training_number"
     t.integer  "trials"
     t.float    "time"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

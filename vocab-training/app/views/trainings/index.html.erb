@@ -3,10 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th>Word,</th>
+      <th>Word</th>
       <th>Training number</th>
       <th>Trials</th>
       <th>Time</th>
+      <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= training.training_number %></td>
         <td><%= training.trials %></td>
         <td><%= training.time %></td>
+        <td><%= training.name %></td>
         <td><%= link_to 'Show', training %></td>
         <td><%= link_to 'Edit', edit_training_path(training) %></td>
         <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' } %></td>

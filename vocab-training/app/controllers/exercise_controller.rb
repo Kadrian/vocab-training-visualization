@@ -7,6 +7,7 @@ class ExerciseController < ApplicationController
 
   def finish
 	data = params["data"]
+	name = params["name"]
 
 	# Find biggest training number + increment
 	training_number = 0
@@ -14,15 +15,16 @@ class ExerciseController < ApplicationController
 		training_number = @training.training_number + 1
 	end
 
-	for training in data do
-		word = Word.where({:eng => training["eng"], :jap => training["jap"]}).first
+	data.each do |key, training|
+		word = Word.where({:eng => training["eng"].join('|'), :jap => training["jap"].join('|')}).first
 
 		if word
 			Training.create({
 				:word => word,
 				:time => training["time"],
 				:trials => training["trials"],
-				:training_number => training_number
+				:training_number => training_number,
+				:name => name
 			})
 		else
 			puts 'ERROR: Cannot find ' + training["jap"] + " : " + training["eng"] + ". Recording not saved!"

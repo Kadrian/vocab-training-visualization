@@ -2,6 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# TODO: ORGANIZE VARIABLES - GLOBAL VARIABLES (window.*) ETC
 allowedTrials = 2
 progressCorrect = '#exercise-correct'
 progressWrong = '#exercise-wrong'
@@ -11,16 +12,21 @@ historyLength = 10
 # TRAINING
 # ------------------------
 finishTraining = () ->
-    # TODO: Do some more awesome stuff like saving everything
-    $.ajax '/exercise/finished',
+    payload = 
+        "data": window.doneWords
+        "name": $('#name').val()
+
+    $('#name').val('')
+
+    $.ajax '/exercise/finish',
         type: 'POST'
         dataType: 'json'
-        data: data
+        data: payload 
         error: (jqXHR, textStatus, errorThrown) ->
             console.log "AJAX Error: #{textStatus}"
         success: (data, textStatus, jqXHR) ->
             console.log "Successfully saved your results."
-            
+
     abortTraining()
 
 startTraining = () ->
@@ -38,6 +44,7 @@ startTraining = () ->
     window.words = window.vocab.slice(range[0], range[1])
     window.trainingAmount = window.words.length
     window.repeatWords = []
+    window.doneWords = []
     window.repetitionPhase = false
 
     resetExerciseProgress()
@@ -66,7 +73,11 @@ abortTraining = () ->
 endTraining = () ->
     if window.repetitionPhase
         # END TRAINING
-        report = $('<h3></h3>').html("PROBLEMS WERE")
+        report = $('<h3></h3>')
+        if window.repeatWords.length == 0
+            report.html("ALL CORRECT")
+        else
+            report.html("PROBLEMS WERE")
         $('#report').append(report)
         for w in window.repeatWords
             jap = w["jap"].join(' | ')
@@ -108,9 +119,10 @@ submitAnswer = (answer) ->
     # Check correctness
     for jap in window.word["jap"]
         if answer == jap
-            console.log "CORRECT"
-            # TODO: SAVE ALL SORTS OF STATISTICS
             $('#answer-form').removeClass('has-error').addClass('has-success')
+
+            window.word["time"] += new Date().getTime() - window.startTime
+            window.doneWords.push(window.word)
 
             if not window.repetitionPhase
                 updateExerciseProgress()
@@ -124,12 +136,14 @@ submitAnswer = (answer) ->
 
 
 handleWrong = (answer) ->
-    window.trials++
+    window.currentTrials++
     window.word["trials"]++
 
-    if window.word["trials"] > allowedTrials
+    if window.currentTrials > allowedTrials
         $('#answer-form').removeClass('has-error')
         $('#question').css('color', 'red')
+
+        window.word["time"] += new Date().getTime() - window.startTime
 
         if window.repetitionPhase
             window.words.push(window.word)
@@ -149,10 +163,15 @@ nextWord = () ->
         return
 
     window.word = removeRandom(window.words)
-    window.word["trials"] = 1
+    if not window.word["tirals"]?
+        window.word["trials"] = 1
+    if not window.word["time"]?
+        window.word["time"] = 0.0
+    window.currentTrials = 1
     
     eng = selectRandom(window.word["eng"])
     $('#question').html(eng)
+    window.startTime = new Date().getTime();
 
 # ------------------------
 # PROGRESS
