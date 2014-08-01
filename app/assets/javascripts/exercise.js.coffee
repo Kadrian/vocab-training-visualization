@@ -311,7 +311,7 @@ setupSliderInput = (numVocab) ->
 # ------------------------
 # MAIN
 # ------------------------
-$ ->
+ready = ->
     # LOAD VOCABULARY
     $.ajax '/exercise/vocab',
         type: 'GET'
@@ -342,3 +342,6 @@ $ ->
             e.preventDefault()
             submitAnswer($(@).val())
     )
+
+$(document).ready(ready)
+$(document).on('page:load', ready) # TURBO LINKS

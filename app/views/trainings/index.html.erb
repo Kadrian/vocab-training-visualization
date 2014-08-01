@@ -1,6 +1,6 @@
 <h1>Listing trainings</h1>
 
-<table>
+<table class="table table-condensed table-striped">
   <thead>
     <tr>
       <th>Word</th>
@@ -20,9 +20,9 @@
         <td><%= training.trials %></td>
         <td><%= training.time %></td>
         <td><%= training.name %></td>
-        <td><%= link_to 'Show', training %></td>
-        <td><%= link_to 'Edit', edit_training_path(training) %></td>
-        <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', training, :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_training_path(training), :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Destroy', training, :class => "btn btn-default btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Training', new_training_path %>
+<%= link_to 'New Training', new_training_path, :class => "btn btn-default" %>
