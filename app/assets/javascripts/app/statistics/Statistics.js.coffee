@@ -80,13 +80,13 @@ ready = ->
 		data = $.extend(true, [], graph1.getData()[0]["data"])
 		if option == 'opt1'
 			data.sort( (a,b) ->
-				b[1] - a[1] # sort by time
-			)
-		else if option == 'opt2'
-			data.sort( (a,b) ->
 				if b[2]["trials"] == a[2]["trials"]
 					return b[1] - a[1]
 				b[2]["trials"] - a[2]["trials"]
+			)
+		else if option == 'opt2'
+			data.sort( (a,b) ->
+				b[1] - a[1] # sort by time
 			)
 		else
 			console.log "Error: Option not available"

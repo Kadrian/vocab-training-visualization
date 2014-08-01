@@ -9,7 +9,7 @@ class StatisticsController < ApplicationController
   	data = Training.joins("LEFT JOIN words ON trainings.word_id = words.id")
   		.select('trainings.*, words.*')
   		.where(:training_number => training_number)
-  		.order(time: :desc)
+  		.order(trials: :desc, time: :desc)
 
   	@data = data.to_json
   	@name = data.first.name
