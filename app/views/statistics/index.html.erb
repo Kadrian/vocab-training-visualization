@@ -9,12 +9,21 @@
 <div class="row">
 	<div class="col-sm-12 text-left">
 		<div class="graph" id="graph1">
-			<h1>Last training</h1>	
+			<h1>Last training by <%= @name %></h1>	
 			<div class="description">
 				<p class="totalWords"></p>
 				<p class="totalTime"></p>
 				<p class="date"></p>
 			</div>		
+			<h4>Sorted by</h4>
+			<div id="last-training-toggle" class="btn-group" data-toggle="buttons">
+				<label class="btn btn-default active">
+					<input type="radio" name="options" id="opt1" checked> time
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="options" id="opt2"> trials
+				</label>
+			</div>
 			<div id="graph1-chart" style="width:100%; height:300px; margin: 0 auto;"></div>
 		</div>
 	</div>

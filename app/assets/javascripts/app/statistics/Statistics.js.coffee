@@ -11,14 +11,23 @@ tooltipContent = (label, xval, yval, item) ->
 	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
 	tooltip.html()
 
+updateGraphData = (graph, newdata) ->
+	for d, i in newdata
+		d[0] = i
+	data = graph.getData()[0]
+	data["data"] = newdata
+	graph.setData([data]);
+	graph.setupGrid();
+	graph.draw();
+
 ready = ->
 	console.log(window.data)
-	# --------------------
-	# Graph 1
-	# --------------------
 	if window.data.length == 0
 		return
 
+	# --------------------
+	# LAST TRAINING
+	# --------------------
 	date = window.data[0]["created_at"]
 	"2014-07-31T17:47:10.990Z"
 	dateStr = date.split('T')[0] + " " + date.split('T')[1].split('.')[0]
@@ -33,14 +42,6 @@ ready = ->
 	$('#graph1 .totalWords').html(window.data.length + " words")
 	$('#graph1 .totalTime').html("Duration " + totalMin + " min " + totalSec + " sec")
 
-
-	data = []
-	for word, i in window.data
-		data.push([i, word["time"] / 1000.0,
-			"trials": word["trials"]
-			"jap": word["jap"]
-			"eng": word["eng"]
-		])
 
 	options =
 		hoverable: true
@@ -61,8 +62,37 @@ ready = ->
 			ticks: false
 			tickColor: "transparent"
 
-	console.log data
-	$.plot($("#graph1-chart"), [data], options);
+	# Graph 1
+	data = []
+	for word, i in window.data
+		data.push([i, word["time"] / 1000.0,
+			"trials": word["trials"]
+			"jap": word["jap"]
+			"eng": word["eng"]
+		])
+
+
+	window.graph1 = $.plot($("#graph1-chart"), [data], options);
+
+	$('#last-training-toggle label').click ->
+		# Determine which button has been toggled - SUPER UGLY
+		option = $(@).find('input').attr('id')
+		data = $.extend(true, [], graph1.getData()[0]["data"])
+		if option == 'opt1'
+			data.sort( (a,b) ->
+				b[1] - a[1] # sort by time
+			)
+		else if option == 'opt2'
+			data.sort( (a,b) ->
+				if b[2]["trials"] == a[2]["trials"]
+					return b[1] - a[1]
+				b[2]["trials"] - a[2]["trials"]
+			)
+		else
+			console.log "Error: Option not available"
+
+		updateGraphData(window.graph1, data)
+
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

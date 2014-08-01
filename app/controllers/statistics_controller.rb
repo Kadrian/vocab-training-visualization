@@ -6,10 +6,13 @@ class StatisticsController < ApplicationController
   	# TODO: Look up why this doesn't work
   	# 	Training.includes(:word).order(time: :desc).to_json
   	# -----------------	
-  	@data = Training.joins("LEFT JOIN words ON trainings.word_id = words.id")
+  	data = Training.joins("LEFT JOIN words ON trainings.word_id = words.id")
   		.select('trainings.*, words.*')
   		.where(:training_number => training_number)
-  		.order(time: :desc).to_json
+  		.order(time: :desc)
+
+  	@data = data.to_json
+  	@name = data.first.name
 
   end
 end
