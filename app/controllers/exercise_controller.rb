@@ -9,11 +9,8 @@ class ExerciseController < ApplicationController
 	data = params["data"]
 	name = params["name"]
 
-	# Find biggest training number + increment
-	training_number = 0
-	if @training = Training.order("training_number").last
-		training_number = @training.training_number + 1
-	end
+	# Increment to get a fresh training number
+	training_number = Training.maximum('training_number') + 1
 
 	for training in data
 		word = Word.where({:eng => training["eng"].join('|'), :jap => training["jap"].join('|')}).first

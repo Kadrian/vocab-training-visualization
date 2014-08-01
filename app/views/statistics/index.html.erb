@@ -2,9 +2,20 @@
   <%= javascript_include_tag 'app/statistics', 'data-turbolinks-track' => true %>  
 <% end %>
 
+<%= javascript_tag do %>
+	window.data = <%= raw @data %>
+<% end %>
+
 <div class="row">
-	<div class="col-sm-12 text-center">
-		<h1>Last training</h1>	
-		<div id="placeholder" style="width:800px;height:300px"></div>
+	<div class="col-sm-12 text-left">
+		<div class="graph" id="graph1">
+			<h1>Last training</h1>	
+			<div class="description">
+				<p class="totalWords"></p>
+				<p class="totalTime"></p>
+				<p class="date"></p>
+			</div>		
+			<div id="graph1-chart" style="width:100%; height:300px; margin: 0 auto;"></div>
+		</div>
 	</div>
 </div>

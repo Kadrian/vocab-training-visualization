@@ -1,7 +1,7 @@
 class CreateTrainings < ActiveRecord::Migration
   def change
     create_table :trainings do |t|
-      t.integer :word_id
+      t.references :word
       t.integer :training_number
       t.integer :trials
       t.float :time
