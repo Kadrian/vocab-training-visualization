@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require_tree ./app/global/
 //= require bootstrap.min 
 //= require bootstrap-slider
 //= require jquery.flot.min

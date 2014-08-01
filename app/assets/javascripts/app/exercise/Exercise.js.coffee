@@ -344,4 +344,4 @@ ready = ->
     )
 
 $(document).ready(ready)
-$(document).on('page:load', ready) # TURBO LINKS
+$(document).on('page:load', ready)
