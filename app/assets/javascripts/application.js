@@ -16,3 +16,4 @@
 //= require_tree .
 //= require bootstrap.min 
 //= require bootstrap-slider
+//= require jquery.flot.min
