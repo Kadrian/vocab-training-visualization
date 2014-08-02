@@ -6,13 +6,13 @@
 	<div class="col-sm-12 text-center">
 		<h1>TRAINING SET</h1>
 
-		<form class="form-inline">
+		<form class="form-inline" onkeypress="return event.keyCode != 13;">
 			<input id="slider" type="text" class="span4" value="" data-slider-id="vocab-slide">
 			<input type="text" id="min" class="form-control vals">
 			<input type="text" id="max" class="form-control vals">
 		</form>
 
-		<form id="start-form" class="form-inline text-right">
+		<form id="start-form" class="form-inline text-right" onkeypress="return event.keyCode != 13;">
 			<p id="numwords-label"></p>
 			<button id="start" type="button" class="btn btn-primary">Start</button>
 		</form>
@@ -28,7 +28,7 @@
 
 		<div class="alert alert-success alert-dismissable" style="display:none;">
 		   	<span id="alert-msg">Oh my god! You've done it!  -  </span>
-			<form id="name-form" class="form-inline" style="display:inline-block">
+			<form id="name-form" class="form-inline" style="display:inline-block" onkeypress="return event.keyCode != 13;">
 		   		<input id="name" class="form-control" type="text" placeholder="What's your name?" />
 		   	</form>
 		   	<button id="awesome-btn" class="btn btn-default">Yes, I'm awesome, reset please!</button>

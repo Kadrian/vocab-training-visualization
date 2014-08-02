@@ -339,7 +339,7 @@ ready = ->
         finishTraining()
 
     $('#answer').keypress( (e) ->
-        if(e.keyCode == 13) # ENTER KEY PRESSED
+        if e.keyCode == 13 # ENTER KEY PRESSED
             e.preventDefault()
             submitAnswer($(@).val())
     )
