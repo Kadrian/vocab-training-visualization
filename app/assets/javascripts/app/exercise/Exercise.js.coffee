@@ -164,8 +164,9 @@ nextWord = () ->
         return
 
     window.word = removeRandom(window.words)
-    if not window.word["tirals"]?
+    if not window.word["trials"]?
         window.word["trials"] = 1
+
     if not window.word["time"]?
         window.word["time"] = 0.0
     window.currentTrials = 1

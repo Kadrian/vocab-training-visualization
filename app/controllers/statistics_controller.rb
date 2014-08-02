@@ -11,6 +11,10 @@ class StatisticsController < ApplicationController
   		.where(:training_number => training_number)
   		.order(trials: :desc, time: :desc)
 
+  	for d in data
+  		d["timesTrained"] = Training.group(:word_id).where(:word_id => d.word_id).count()[d.word_id]
+  	end
+
   	@data = data.to_json
   	@name = data.first.name
 

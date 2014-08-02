@@ -11,13 +11,13 @@ tooltipContentBase = (label, xval, yval, item) ->
 
 tooltipContent1 = (label, xval, yval, item) ->
 	[tooltip, info] = tooltipContentBase(label, xval, yval, item)
-	tooltip.append('<p>Time: <b>' + yval + ' seconds</b></p>')
+	tooltip.append('<p>Time: <b>' + yval.toFixed(3) + ' seconds</b></p>')
 	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
 	tooltip.html()
 
 tooltipContent2 = (label, xval, yval, item) ->
 	[tooltip, info] = tooltipContentBase(label, xval, yval, item)
-	tooltip.append('<p>Time: <b>' + yval + ' seconds / character</b></p>')
+	tooltip.append('<p>Time: <b>' + yval.toFixed(3) + ' seconds / character</b></p>')
 	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
 	tooltip.html()
 
