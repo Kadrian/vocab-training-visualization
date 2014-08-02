@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @word_list.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @word_list.author %>
+</p>
+
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th>Back</th>
+      <th>Front</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @word_list.words.each do |word| %>
+      <tr>
+        <td><%= word.back %></td>
+        <td><%= word.front %></td>
+        <td><%= link_to 'Show', word, :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_word_path(word), :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Destroy', word, :class => "btn btn-default btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<%= link_to 'Edit', edit_word_list_path(@word_list), :class => "btn btn-default" %> |
+<%= link_to 'Back', word_lists_path, :class => "btn btn-default" %>

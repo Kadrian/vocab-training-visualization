@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802102824) do
+ActiveRecord::Schema.define(version: 20140802105333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,19 @@ ActiveRecord::Schema.define(version: 20140802102824) do
     t.datetime "updated_at"
   end
 
+  create_table "word_lists", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "words", force: true do |t|
     t.string   "back"
     t.string   "front"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "word_list_id"
   end
 
 end

@@ -1,0 +1,61 @@
+<%= form_for @word_list, :html => {:role => 'form'} do |f| %>
+  <% if @word_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word_list.errors.count, "error") %> prohibited this word_list from being saved:</h2>
+
+      <ul>
+      <% @word_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-inline">
+    <div class="form-group">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, :class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :author %><br>
+      <%= f.text_field :author, :class => "form-control" %>    
+    </div>
+  </div>
+
+  <h2>EITHER: Add a lot of words</h2>
+  <h4>One line per word, separate same language alternatives by <b>|</b>, back and front of the card by <b>;</b></h4>
+  <div id="word-list-instructions" class="well">
+    <h5>EXAMPLE</h5>
+    <p>foreign;mylanguage</p>
+    <p>foreign|foreign2;mylanguage</p>
+    <p>foreign|foreign2;mylanguage|mylanguage2</p>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :words_text %><br>
+      <textarea placeholder="optional" id="word_list_words_text" name="word_list[words_text]" class="form-control" style="height:200px;"></textarea>
+  </div>
+
+  <h2>OR: One word at a time.</h2>
+
+  <div id="words">
+    <% render :partial => "word", :collection => @word_list.words %>
+  </div>
+  <button type="button" id="add" class="btn btn-default form-btn">Add a word</button>
+  <script type="text/javascript">
+  $(function() {
+    function add(){
+      $('#words').append("<%= j render(:partial => 'word', :locals => {word: Word.new}) %>");
+    }
+    $('#add').click(function(){
+      add();
+    });
+    add();
+  });
+  </script>
+
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary form-btn" %>
+  </div>
+<% end %>

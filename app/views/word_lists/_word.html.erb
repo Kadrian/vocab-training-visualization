@@ -1,0 +1,22 @@
+<div class="word">
+	<%= fields_for "word_list[word_attributes][]", word do |word_form| %>
+		<div class="form-inline">
+			<div class="form-group">
+				<%= word_form.label :front %>
+				<%= word_form.text_field :front, :class => "form-control input-sm" %>    
+			</div>
+			<div class="form-group">
+				<%= word_form.label :back%>
+				<%= word_form.text_field :back, :class => "form-control input-sm" %>    
+				<button type="button" class="btn btn-default btn-xs form-btn remove">Remove</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.remove').click(function(){
+					$(this).closest('.word').remove();
+				});
+			});
+		</script>
+	<% end %>
+</div>

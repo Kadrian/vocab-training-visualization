@@ -27,10 +27,11 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
+	        <li><%= link_to "Word lists", word_lists_path %></li>
 	        <li><%= link_to "Statistics", statistics_index_path %></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><%= link_to "Github", "https://github.com/Kadrian/vocab-training-visualization" %></li>
+	        <li><%= link_to (image_tag "GitHub-Mark-32px.png", :width => "20px"), "https://github.com/Kadrian/vocab-training-visualization" %></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

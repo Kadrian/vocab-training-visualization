@@ -1,0 +1,29 @@
+<h1>Word Lists</h1>
+
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Number of words</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @word_lists.each do |word_list| %>
+      <tr>
+        <td><%= word_list.title %></td>
+        <td><%= word_list.author %></td>
+        <td><%= word_list.words.count %></td>
+        <td><%= link_to 'Show', word_list, :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_word_list_path(word_list), :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Destroy', word_list, :class => "btn btn-default btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Word list', new_word_list_path, :class => "btn btn-default" %>

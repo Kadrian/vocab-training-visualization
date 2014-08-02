@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :word_lists
+
   get 'statistics/index'
 
   resources :trainings
