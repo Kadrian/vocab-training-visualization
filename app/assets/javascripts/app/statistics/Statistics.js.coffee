@@ -3,11 +3,21 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-tooltipContent = (label, xval, yval, item) ->
+tooltipContentBase = (label, xval, yval, item) ->
 	info = item["series"]["data"][item["dataIndex"]][2]
 	tooltip = $('<div></div>')
 	tooltip.append('<h4>' + info["jap"] + " - " + info["eng"] + '</h4>')
+	[tooltip, info]
+
+tooltipContent1 = (label, xval, yval, item) ->
+	[tooltip, info] = tooltipContentBase(label, xval, yval, item)
 	tooltip.append('<p>Time: <b>' + yval + ' seconds</b></p>')
+	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
+	tooltip.html()
+
+tooltipContent2 = (label, xval, yval, item) ->
+	[tooltip, info] = tooltipContentBase(label, xval, yval, item)
+	tooltip.append('<p>Time: <b>' + yval + ' seconds / character</b></p>')
 	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
 	tooltip.html()
 
@@ -50,7 +60,7 @@ ready = ->
 			hoverable: true 
 		tooltip: true
 		tooltipOpts:	
-			content: tooltipContent
+			content: tooltipContent1
 		series:
 			label: "Solving times in seconds"
 			bars:
@@ -73,6 +83,27 @@ ready = ->
 
 
 	window.graph1 = $.plot($("#graph1-chart"), [data], options);
+
+	# Graph 2
+	data2 = $.extend(true, [], data)
+	options2 = $.extend(true, {}, options)	
+	options2["tooltipOpts"]["content"] = tooltipContent2
+	options2["series"]["label"] = "Reaction seconds / character"
+
+	for w in data2
+		jap = w[2]["jap"].split('|')
+		maxlen = jap[0].length
+		for j in jap
+			if j.lengh > maxlen
+				maxlen = j.length
+		w[1] = w[1] / maxlen
+	data2.sort( (a,b) ->
+		b[1] - a[1]	
+	)
+	for w, i in data2
+		w[0] = i
+
+	window.graph2 = $.plot($("#graph2-chart"), [data2], options2);
 
 	$('#last-training-toggle label').click ->
 		# Determine which button has been toggled - SUPER UGLY
