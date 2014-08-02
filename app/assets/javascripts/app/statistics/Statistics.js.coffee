@@ -6,7 +6,7 @@
 tooltipContentBase = (label, xval, yval, item) ->
 	info = item["series"]["data"][item["dataIndex"]][2]
 	tooltip = $('<div></div>')
-	tooltip.append('<h4>' + info["jap"] + " - " + info["eng"] + '</h4>')
+	tooltip.append('<h4>' + info["back"] + " - " + info["front"] + '</h4>')
 	[tooltip, info]
 
 tooltipAddInfo = (tooltip, info) ->
@@ -82,8 +82,8 @@ ready = ->
 	for word, i in window.data
 		data.push([i, word["time"] / 1000.0,
 			"trials": word["trials"]
-			"jap": word["jap"]
-			"eng": word["eng"]
+			"back": word["back"]
+			"front": word["front"]
 			"timesTrained": word["timesTrained"]
 		])
 
@@ -97,9 +97,9 @@ ready = ->
 	options2["series"]["label"] = "Reaction seconds / character"
 
 	for w in data2
-		jap = w[2]["jap"].split('|')
-		maxlen = jap[0].length
-		for j in jap
+		back = w[2]["back"].split('|')
+		maxlen = back[0].length
+		for j in back
 			if j.lengh > maxlen
 				maxlen = j.length
 		w[1] = w[1] / maxlen

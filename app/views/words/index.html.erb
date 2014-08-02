@@ -3,8 +3,8 @@
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Jap</th>
-      <th>Eng</th>
+      <th>Back</th>
+      <th>Front</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,8 +12,8 @@
   <tbody>
     <% @words.each do |word| %>
       <tr>
-        <td><%= word.jap %></td>
-        <td><%= word.eng %></td>
+        <td><%= word.back %></td>
+        <td><%= word.front %></td>
         <td><%= link_to 'Show', word, :class => "btn btn-default btn-xs" %></td>
         <td><%= link_to 'Edit', edit_word_path(word), :class => "btn btn-default btn-xs" %></td>
         <td><%= link_to 'Destroy', word, :class => "btn btn-default btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>

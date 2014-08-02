@@ -32,7 +32,7 @@ class WelcomeController < ApplicationController
 				next
 			end
 
-			word = Word.where({:eng => cols[0], :jap => cols[1]}).first_or_create
+			word = Word.where({:front => cols[0], :back => cols[1]}).first_or_create
 
 			if word
 				Training.create({

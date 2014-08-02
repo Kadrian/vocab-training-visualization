@@ -81,9 +81,9 @@ endTraining = () ->
             report.html("PROBLEMS WERE")
         $('#report').append(report)
         for w in window.repeatWords
-            jap = w["jap"].join(' | ')
-            eng = w["eng"].join(' | ')
-            report = $('<p></p>').html(jap + " - " + eng)
+            back = w["back"].join(' | ')
+            front = w["front"].join(' | ')
+            report = $('<p></p>').html(back + " - " + front)
             $('#report').append(report)
 
         $('#answer-form').hide()
@@ -118,8 +118,8 @@ submitAnswer = (answer) ->
     $('#answer').val('')
 
     # Check correctness
-    for jap in window.word["jap"]
-        if answer == jap
+    for back in window.word["back"]
+        if answer == back
             $('#answer-form').removeClass('has-error').addClass('has-success')
 
             window.word["time"] += new Date().getTime() - window.startTime
@@ -152,7 +152,7 @@ handleWrong = (answer) ->
             window.repeatWords.push(window.word)
             updateExerciseProgress()
 
-        pushHistory(answer, false, window.word['jap'].join(' or '))
+        pushHistory(answer, false, window.word['back'].join(' or '))
         enterReadyPhase()
         return
 
@@ -171,8 +171,8 @@ nextWord = () ->
         window.word["time"] = 0.0
     window.currentTrials = 1
     
-    eng = selectRandom(window.word["eng"])
-    $('#question').html(eng)
+    front = selectRandom(window.word["front"])
+    $('#question').html(front)
     window.startTime = new Date().getTime();
 
 # ------------------------

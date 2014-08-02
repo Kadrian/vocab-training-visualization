@@ -13,7 +13,7 @@ class ExerciseController < ApplicationController
 	training_number = Training.maximum('training_number') + 1
 
 	for training in data
-		word = Word.where({:eng => training["eng"].join('|'), :jap => training["jap"].join('|')}).first
+		word = Word.where({:front => training["front"].join('|'), :back => training["back"].join('|')}).first
 
 		if word
 			Training.create({
@@ -24,7 +24,7 @@ class ExerciseController < ApplicationController
 				:name => name
 			})
 		else
-			puts 'ERROR: Cannot find ' + training["jap"] + " : " + training["eng"] + ". Recording not saved!"
+			puts 'ERROR: Cannot find ' + training["back"] + " : " + training["front"] + ". Recording not saved!"
 		end
 
 	end
@@ -40,18 +40,18 @@ class ExerciseController < ApplicationController
 	vocab = []
 	parsed = CSV.parse(csv_text, :col_sep => ";")
 	parsed.each do |w|
-		jap = w[0].split('|') #jap
-		eng = w[1].split('|') #eng
-		vocab << {"jap" => jap, "eng" => eng}
+		back = w[0].split('|') #back
+		front = w[1].split('|') #front
+		vocab << {"back" => back, "front" => front}
 	end
 	vocab
   end
   	
   def vocab
-	@vocab = Word.select('id, jap, eng')
+	@vocab = Word.select('id, back, front')
 	@vocab.each do | w |
-		w["jap"] = w["jap"].split('|')
-		w["eng"] = w["eng"].split('|')
+		w["back"] = w["back"].split('|')
+		w["front"] = w["front"].split('|')
 	end
 
 	respond_to do |format|

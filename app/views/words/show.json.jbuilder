@@ -1,1 +1,1 @@
-json.extract! @word, :id, :jap, :eng, :created_at, :updated_at
+json.extract! @word, :id, :back, :front, :created_at, :updated_at
