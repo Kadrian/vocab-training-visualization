@@ -9,16 +9,21 @@ tooltipContentBase = (label, xval, yval, item) ->
 	tooltip.append('<h4>' + info["jap"] + " - " + info["eng"] + '</h4>')
 	[tooltip, info]
 
+tooltipAddInfo = (tooltip, info) ->
+	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
+	tooltip.append('<p>Times trained: <b>' + info["timesTrained"] + ' times</b></p>')
+	tooltip
+
 tooltipContent1 = (label, xval, yval, item) ->
 	[tooltip, info] = tooltipContentBase(label, xval, yval, item)
 	tooltip.append('<p>Time: <b>' + yval.toFixed(3) + ' seconds</b></p>')
-	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
+	tooltip = tooltipAddInfo(tooltip, info)
 	tooltip.html()
 
 tooltipContent2 = (label, xval, yval, item) ->
 	[tooltip, info] = tooltipContentBase(label, xval, yval, item)
 	tooltip.append('<p>Time: <b>' + yval.toFixed(3) + ' seconds / character</b></p>')
-	tooltip.append('<p>Trials: <b>' + info["trials"] + '</b></p>')
+	tooltip = tooltipAddInfo(tooltip, info)
 	tooltip.html()
 
 updateGraphData = (graph, newdata) ->
@@ -79,6 +84,7 @@ ready = ->
 			"trials": word["trials"]
 			"jap": word["jap"]
 			"eng": word["eng"]
+			"timesTrained": word["timesTrained"]
 		])
 
 
