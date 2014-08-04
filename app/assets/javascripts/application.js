@@ -16,6 +16,7 @@
 //= require_tree ./app/global/
 //= require bootstrap.min 
 //= require bootstrap-slider
+//= require bootstrap-select.min
 //= require jquery.flot.min
 //= require jquery.flot.categories.min
 //= require jquery.flot.tooltip.min

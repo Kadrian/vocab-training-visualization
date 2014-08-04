@@ -3,6 +3,7 @@ require 'csv'
 class ExerciseController < ApplicationController
 
   def index
+  	@wordlists = WordList.all()
   end
 
   def finish

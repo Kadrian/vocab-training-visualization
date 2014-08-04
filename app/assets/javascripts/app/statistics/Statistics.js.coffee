@@ -67,7 +67,7 @@ ready = ->
 		tooltipOpts:	
 			content: tooltipContent1
 		series:
-			label: "Solving times in seconds"
+			label: "Solving time in seconds"
 			bars:
 				show: true
 				barWidth: 0.95
@@ -94,7 +94,7 @@ ready = ->
 	data2 = $.extend(true, [], data)
 	options2 = $.extend(true, {}, options)	
 	options2["tooltipOpts"]["content"] = tooltipContent2
-	options2["series"]["label"] = "Reaction seconds / character"
+	options2["series"]["label"] = "Solving time in seconds per character"
 
 	for w in data2
 		back = w[2]["back"].split('|')

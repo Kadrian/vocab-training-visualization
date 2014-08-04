@@ -33,6 +33,8 @@ startTraining = () ->
     # UI
     $("#min").prop('disabled', true)
     $("#max").prop('disabled', true)
+    $(".wordlistpicker").prop('disabled', true)
+    $(".wordlistpicker").selectpicker('refresh')
     $("#answer").prop('disabled', false)
     $("#slider").slider('disable')
     $("#start").html('Cancel')
@@ -54,6 +56,8 @@ abortTraining = () ->
     # UI    
     $("#min").prop('disabled', false)
     $("#max").prop('disabled', false)
+    $(".wordlistpicker").prop('disabled', false)
+    $(".wordlistpicker").selectpicker('refresh')
     $('#answer-form').show()
     $("#answer").prop('disabled', true)
     $("#slider").slider('enable')
@@ -270,7 +274,9 @@ updateLabel = (html) ->
 setupSliderInput = (numVocab) ->
     min = 0
     max = numVocab
-    initMin = numVocab / 2
+    initMin = 0
+    if numVocab > 50
+        initMin = numVocab - 50
     initMax = numVocab
     updateLabelRange([initMin, initMax])
 
@@ -323,10 +329,15 @@ ready = ->
             window.vocab = data
 
             numVocab = window.vocab.length
-            if numVocab > 10
+            if numVocab > 0
                 setupSliderInput(numVocab)
             else
-                console.log "ERROR: You need at least 10 Words in your vocabulary."
+                console.log "ERROR: No words in your vocabulary."
+
+    # INIT WORD LISTS
+    $('.wordlistpicker').selectpicker(
+        style: 'btn-default'
+    )
 
     # HANDLE CLICKS / KEYS
     $('#start').click ->
