@@ -315,14 +315,14 @@ setupSliderInput = (numVocab) ->
         updateLabelRange(range)
     )
 
-# ------------------------
-# MAIN
-# ------------------------
-ready = ->
-    # LOAD VOCABULARY
+loadVocabulary = (wordlist) ->
+    payload =
+        wordlist: wordlist
+
     $.ajax '/exercise/vocab',
         type: 'GET'
         dataType: 'json'
+        data: payload
         error: (jqXHR, textStatus, errorThrown) ->
             console.log "AJAX Error: #{textStatus}"
         success: (data, textStatus, jqXHR) ->
@@ -334,10 +334,22 @@ ready = ->
             else
                 console.log "ERROR: No words in your vocabulary."
 
+# ------------------------
+# MAIN
+# ------------------------
+ready = ->
+    loadVocabulary()
+
     # INIT WORD LISTS
     $('.wordlistpicker').selectpicker(
         style: 'btn-default'
     )
+
+    $('.wordlistpicker').change( ->
+        val = $(@).val().split(' - ')
+        loadVocabulary(val)
+    )
+    window.currentList = $('.wordlistpicker').val()
 
     # HANDLE CLICKS / KEYS
     $('#start').click ->

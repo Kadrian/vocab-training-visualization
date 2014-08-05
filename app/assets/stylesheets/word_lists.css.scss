@@ -7,7 +7,6 @@
 }
 
 #word-list-instructions{
-	margin-left: 20px;
 	p{
 		margin:0;
 	}
@@ -15,4 +14,10 @@
 
 .form-btn{
 	margin: 10px 0;
+}
+
+.form-inline .form-group{
+	input{
+		width:400px;
+	}
 }

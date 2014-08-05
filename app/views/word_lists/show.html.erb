@@ -10,6 +10,8 @@
   <%= @word_list.author %>
 </p>
 
+<%= link_to 'Edit', edit_word_list_path(@word_list), :class => "btn btn-default" %>
+
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
@@ -32,7 +34,3 @@
   </tbody>
 </table>
 
-
-
-<%= link_to 'Edit', edit_word_list_path(@word_list), :class => "btn btn-default" %> |
-<%= link_to 'Back', word_lists_path, :class => "btn btn-default" %>

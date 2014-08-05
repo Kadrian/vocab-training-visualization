@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'exercise/vocab' => 'exercise#vocab'
   post 'exercise/finish' => 'exercise#finish'
 
+  get 'statistics/wordListStats' => 'statistics#wordListStats'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

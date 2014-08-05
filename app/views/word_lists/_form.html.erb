@@ -14,16 +14,16 @@
   <div class="form-inline">
     <div class="form-group">
       <%= f.label :title %><br>
-      <%= f.text_field :title, :class => "form-control" %>
+      <%= f.text_field :title, :class => "form-control", :validate => true %>
     </div>
     <div class="form-group">
       <%= f.label :author %><br>
-      <%= f.text_field :author, :class => "form-control" %>    
+      <%= f.text_field :author, :class => "form-control", :validate => true %>    
     </div>
   </div>
 
-  <h2>EITHER: Add a lot of words</h2>
-  <h4>One line per word, separate same language alternatives by <b>|</b>, back and front of the card by <b>;</b></h4>
+  <h2>Add a lot of words</h2>
+  <h4>One line per word, separate alternatives by <b>|</b>, back and front of the card by <b>;</b></h4>
   <div id="word-list-instructions" class="well">
     <h5>EXAMPLE</h5>
     <p>foreign;mylanguage</p>
@@ -36,10 +36,10 @@
       <textarea placeholder="optional" id="word_list_words_text" name="word_list[words_text]" class="form-control" style="height:200px;"></textarea>
   </div>
 
-  <h2>OR: One word at a time.</h2>
+  <h2>Or one word at a time</h2>
 
   <div id="words">
-    <% render :partial => "word", :collection => @word_list.words %>
+    <%= render :partial => "word", :collection => @word_list.words, :as => :word %>
   </div>
   <button type="button" id="add" class="btn btn-default form-btn">Add a word</button>
   <script type="text/javascript">

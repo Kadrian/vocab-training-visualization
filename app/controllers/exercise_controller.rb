@@ -49,7 +49,14 @@ class ExerciseController < ApplicationController
   end
   	
   def vocab
-	@vocab = Word.select('id, back, front')
+  	list = nil
+  	if not params['wordlist'].nil? and not params['wordlist'] == ""
+  		list = WordList.where(:title => params['wordlist'])
+  	else
+  		list = WordList.first
+  	end
+
+	@vocab = Word.select('id, back, front').where(:word_list => list)
 	@vocab.each do | w |
 		w["back"] = w["back"].split('|')
 		w["front"] = w["front"].split('|')
