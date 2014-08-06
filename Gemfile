@@ -43,4 +43,6 @@ gem 'rails_12factor', group: :production
 
 gem 'composite_primary_keys', '~> 7.0.2'
 
+gem "auto_strip_attributes", "~> 1.0"
+
 ruby "2.1.2"

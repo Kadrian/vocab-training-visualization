@@ -1,10 +1,15 @@
 class WordList < ActiveRecord::Base
 	has_many :words
 	validates :title, :author, :presence => true
+	validates_uniqueness_of :title
 	accepts_nested_attributes_for :words
 
-	# def a_lot_of_words=(a_lot_of_words)
-	# end
+	auto_strip_attributes :title, :author, :nullify => false, :squish => true
+
+	def a_lot_of_words=(a_lot_of_words)
+		puts a_lot_of_words
+		# words.build(attributes)
+	end
 
 	# def word_attributes=(word_attributes)
 	# end
