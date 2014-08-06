@@ -28,6 +28,9 @@ tooltipContent2 = (label, xval, yval, item) ->
 
 tooltipContent3 = (label, xval, yval, item) ->
     [tooltip, info] = tooltipContentBase(label, xval, yval, item)
+    tooltip.append('<p>Times trained: <b>' + info["timesTrained"] + ' times</b></p>')
+    tooltip.append('<p>Avg time per training: <b>' + info["avgTime"] + ' seconds</b></p>')
+    tooltip.append('<p>Avg trials per training: <b>' + info["avgTrials"] + ' trials</b></p>')
     tooltip.html()
 
 basicOptions =
@@ -72,6 +75,7 @@ changeWordList = (wordlist) ->
             updateWordStatsGraph(data)
 
 updateWordStatsGraph = (data) ->
+    console.log data
     # TODO DATA
     graphData = []
     for word, i in data
@@ -82,6 +86,7 @@ updateWordStatsGraph = (data) ->
 
     options = $.extend(true, {}, basicOptions)  
     options["series"]["label"] = "Word proficiency"
+    options["series"]["bars"]["lineWidth"] = 0.5
     options["tooltipOpts"]["content"] = tooltipContent3
 
     if not window.graph3?

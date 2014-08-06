@@ -30,13 +30,20 @@ class StatisticsController < ApplicationController
       list = WordList.first
     end
 
-    # TODO: Figure out a way to do it in one query
-    words = Word.where(:word_list => list)
+    # words = Word.joins("JOIN trainings ON trainings.word_id = words.id")
+    #   .select('words.*, COUNT(trainings.word_id) as timesTrained')
+    #   .where(:word_list => list)
+    #   .group("trainings.word_id")
+
+    subquery = Training.select("trainings.word_id, count(trainings.word_id) as timesTrained,
+     avg(trainings.time) as avgTime").group(:word_id).to_sql
+
+    words = Word.select("words.*, p.timesTrained as \"timesTrained\", p.avgTime as \"avgTime\"")
+      .joins("LEFT OUTER JOIN (#{subquery}) as p ON words.id = p.word_id")
+
     for w in words
-      w['timesTrained'] = 0
-      timesTrained = Training.group(:word_id).where(:word_id => w.id).count()[w.id]
-      if not timesTrained.nil?
-        w['timesTrained'] = timesTrained
+      if w['timesTrained'].nil?
+        w['timesTrained'] = 0
       end
     end
 
