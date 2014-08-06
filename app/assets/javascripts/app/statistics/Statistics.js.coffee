@@ -28,9 +28,9 @@ tooltipContent2 = (label, xval, yval, item) ->
 
 tooltipContent3 = (label, xval, yval, item) ->
     [tooltip, info] = tooltipContentBase(label, xval, yval, item)
-    tooltip.append('<p>Times trained: <b>' + info["timesTrained"] + ' times</b></p>')
-    tooltip.append('<p>Avg time per training: <b>' + info["avgTime"] + ' seconds</b></p>')
-    tooltip.append('<p>Avg trials per training: <b>' + info["avgTrials"] + ' trials</b></p>')
+    tooltip.append('<p>Times trained: <b>' + yval + ' times</b></p>')
+    tooltip.append('<p>Avg time per training: <b>' + info["avgTime"].toFixed(3) + ' seconds</b></p>')
+    tooltip.append('<p>Avg trials per training: <b>' + info["avgTrials"].toFixed(1) + ' trials</b></p>')
     tooltip.html()
 
 basicOptions =
@@ -82,6 +82,8 @@ updateWordStatsGraph = (data) ->
         graphData.push([i, word["timesTrained"],
             "back": word["back"]
             "front": word["front"]
+            "avgTime": word["avgTime"] / 1000.0
+            "avgTrials": word["avgTrials"]
         ])
 
     options = $.extend(true, {}, basicOptions)  
@@ -186,5 +188,6 @@ ready = ->
     changeWordList()
 
 
+# TURBOLINKS FIX
 $(document).ready(ready)
 $(document).on('page:load', ready)

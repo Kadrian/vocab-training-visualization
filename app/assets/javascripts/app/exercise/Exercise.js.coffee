@@ -7,6 +7,7 @@ allowedTrials = 2
 progressCorrect = '#exercise-correct'
 progressWrong = '#exercise-wrong'
 historyLength = 10
+defaultWordNum = 10
 
 # ------------------------
 # TRAINING
@@ -275,22 +276,27 @@ setupSliderInput = (numVocab) ->
     min = 0
     max = numVocab
     initMin = 0
-    if numVocab > 50
-        initMin = numVocab - 50
+    if numVocab > defaultWordNum
+        initMin = numVocab - defaultWordNum 
     initMax = numVocab
     updateLabelRange([initMin, initMax])
 
-    $('#slider').slider(
-        orientation: "horizontal"
-        tooltip: "show"
-        min: min
-        max: max
-        step: 1
-        value: [initMin, initMax]
-        handle: "round"
-        formater: (value) ->
-            " " + value + " "
-    )
+    if not window.wordslider?
+        window.wordslider = $('#slider').slider(
+            orientation: "horizontal"
+            tooltip: "show"
+            min: min
+            max: max
+            step: 1
+            value: [initMin, initMax]
+            handle: "round"
+            formater: (value) ->
+                " " + value + " "
+        )
+    else
+        window.wordslider.slider('setAttribute','min', min)
+        window.wordslider.slider('setAttribute','max', max)
+        window.wordslider.slider('setValue', [initMin, initMax])
 
     $('#slider').on('slide', ->
         range = $(@).data('slider').getValue()

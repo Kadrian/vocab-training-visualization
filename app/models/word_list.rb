@@ -8,7 +8,13 @@ class WordList < ActiveRecord::Base
 
 	def a_lot_of_words=(a_lot_of_words)
 		puts a_lot_of_words
-		# words.build(attributes)
+		a_lot_of_words.split("\r\n").each do |line|
+			vocab = line.split(';')
+			if vocab.length != 2
+				next
+			end
+			words.build({:back => vocab[0], :front => vocab[1]})
+		end
 	end
 
 	# def word_attributes=(word_attributes)
