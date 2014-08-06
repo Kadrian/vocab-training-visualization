@@ -1,4 +1,11 @@
-<%= form_for @word_list, :html => {:role => 'form'} do |f| %>
+<%= form_for @word_list, :html => {
+    :id => "new_wordlist",
+    :class => "form-horizontal",
+    :"data-bv-message" => "This value is not valid",
+    :"data-bv-feedbackicons-valid" => "glyphicon glyphicon-ok",
+    :"data-bv-feedbackicons-invalid" => "glyphicon glyphicon-remove",
+    :"data-bv-feedbackicons-validating" => "glyphicon glyphicon-refresh"
+  } do |f| %>
   <% if @word_list.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@word_list.errors.count, "error") %> prohibited this word_list from being saved:</h2>
@@ -11,14 +18,18 @@
     </div>
   <% end %>
 
-  <div class="form-inline">
+  <div class="row">
     <div class="form-group">
-      <%= f.label :title %><br>
-      <%= f.text_field :title, :class => "form-control", :validate => true %>
+      <%= f.label :title, :class => "control-label col-sm-2"%>
+      <div class="col-sm-4">
+        <%= f.text_field :title, :class => "form-control", :"data-bv-notempty" => true, :"data-bv-notempty-message" => "A title is required" %>
+      </div>
     </div>
     <div class="form-group">
-      <%= f.label :author %><br>
-      <%= f.text_field :author, :class => "form-control", :validate => true %>    
+      <%= f.label :author, :class => "control-label col-sm-2" %>
+      <div class="col-sm-4">
+        <%= f.text_field :author, :class => "form-control", :"data-bv-notempty" => true, :"data-bv-notempty-message" => "An author is required"  %>    
+      </div>
     </div>
   </div>
 
@@ -31,28 +42,29 @@
     <p>foreign|foreign2;mylanguage|mylanguage2</p>
   </div>
 
-  <div class="form-group">
-      <%= f.label :words_text %><br>
-      <textarea placeholder="optional" id="word_list_words_text" name="word_list[words_text]" class="form-control" style="height:200px;"></textarea>
+<!--   <div class="row">
+    <div class="form-group">
+      <%= f.label :a_lot_of_words, :class => "control-label col-sm-2"%>
+      <div class="col-sm-4">
+        <textarea placeholder="optional" id="word_list_words_text" name="word_list[a_lot_of_words]" class="form-control" style="height:200px;"></textarea>
+      </div>
+    </div>
   </div>
-
+ -->
   <h2>Or one word at a time</h2>
 
-  <div id="words">
-    <%= render :partial => "word", :collection => @word_list.words, :as => :word %>
-  </div>
-  <button type="button" id="add" class="btn btn-default form-btn">Add a word</button>
+  <button type="button" id="add" class="btn btn-default form-btn">Add a single word</button>
   <script type="text/javascript">
   $(function() {
     function add(){
       $('#words').append("<%= j render(:partial => 'word', :locals => {word: Word.new}) %>");
     }
-    $('#add').click(function(){
-      add();
-    });
-    add();
+    $('#add').click(function(){add();});
   });
   </script>
+  <div id="words">
+    <%= render :partial => "word", :collection => @word_list.words, :as => :word %>
+  </div>
 
 
   <div class="actions">

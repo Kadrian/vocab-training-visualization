@@ -347,9 +347,11 @@ ready = ->
 
     $('.wordlistpicker').change( ->
         val = $(@).val().split(' - ')
-        loadVocabulary(val)
+        if window.currentList != val
+            window.currentList = val
+            loadVocabulary(val)
     )
-    window.currentList = $('.wordlistpicker').val()
+    window.currentList = $('.wordlistpicker').val().split(' - ')
 
     # HANDLE CLICKS / KEYS
     $('#start').click ->

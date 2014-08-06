@@ -14,7 +14,6 @@
       <tr>
         <td><%= word.back %></td>
         <td><%= word.front %></td>
-        <td><%= link_to 'Show', word, :class => "btn btn-default btn-xs" %></td>
         <td><%= link_to 'Edit', edit_word_path(word), :class => "btn btn-default btn-xs" %></td>
         <td><%= link_to 'Destroy', word, :class => "btn btn-default btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

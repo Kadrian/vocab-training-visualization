@@ -54,9 +54,10 @@ class WordsController < ApplicationController
   # DELETE /words/1
   # DELETE /words/1.json
   def destroy
+    word_list = @word.word_list
     @word.destroy
     respond_to do |format|
-      format.html { redirect_to words_url, notice: 'Word was successfully destroyed.' }
+      format.html { redirect_to edit_word_list_path(word_list), notice: 'Word was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

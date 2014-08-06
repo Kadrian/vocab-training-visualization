@@ -1,24 +1,33 @@
-<div class="word">
-	<%= fields_for "word_list[word_attributes][]", word do |word_form| %>
-		<div class="row-fluid form-inline">
-			<div class="form-group">
-				<%= word_form.label :back, :class => "control-label" %>
-				<%= word_form.text_field :back, :class => "form-control input-sm" %>    
-			</div>
-			<div class="form-group">
-				<%= word_form.label :front, :class => "control-label" %>
-				<%= word_form.text_field :front, :class => "form-control input-sm" %>    
-			</div>
-			<div class="form-group">
-				<button type="button" class="btn btn-default btn-xs form-btn remove">Remove</button>
-			</div>
-		</div>
-		<script type="text/javascript">
-			$(function(){
-				$('.remove').click(function(){
-					$(this).closest('.word').remove();
-				});
-			});
-		</script>
-	<% end %>
+<div class="row-fluid word">
+  <%= fields_for "word_list[words_attributes]", word, :index => nil do |word_form| %>
+    <div class="form-inline">
+      <div class="form-group">
+        <div class="col-sm-4">
+          <%= word_form.hidden_field :id, :value => word_form.object.id %>
+          <%= word_form.text_field :back, :class => "form-control input-sm", :placeholder => "back" %>    
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <%= word_form.text_field :front, :class => "form-control input-sm", :placeholder => "front" %>    
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <% if word_form.object.id.nil? %>
+            <button type="button" class="btn btn-default btn-xs form-btn remove">Remove</button>
+          <% else %>
+            <%= link_to 'Destroy', word, :class => "btn btn-default form-btn btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function(){
+        $('.remove').click(function(){
+          $(this).closest('.word').remove();
+        });
+      });
+    </script>
+  <% end %>
 </div>
