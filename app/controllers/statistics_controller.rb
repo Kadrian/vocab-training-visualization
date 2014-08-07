@@ -44,7 +44,7 @@ class StatisticsController < ApplicationController
       p.timesTrained as \"timesTrained\",
       p.avgTime as \"avgTime\",
       p.avgTrials as \"avgTrials\"")
-      .joins("LEFT OUTER JOIN (#{subquery}) as p ON words.id = p.word_id").where(:word_list => list)
+      .joins("LEFT OUTER JOIN (#{subquery}) as p ON words.id = p.word_id").where(:word_list => list).order('words.id')
 
     for w in words
       if w['timesTrained'].nil?
