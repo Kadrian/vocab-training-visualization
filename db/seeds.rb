@@ -8,7 +8,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-list = WordList.find_or_create_by(:title => 'Japanese basic vocabulary').update_attributes(:author => 'Kai')
+list = WordList.find_or_create_by(:title => 'Japanese basic vocabulary')
+list.update_attributes(:author => 'Kai')
 
 Word.find_or_create_by(:back => "家|いえ", :front => "house").update_attributes(:word_list => list)
 Word.find_or_create_by(:back => "いいえ", :front => "no").update_attributes(:word_list => list)
