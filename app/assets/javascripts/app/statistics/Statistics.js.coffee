@@ -87,7 +87,7 @@ updateWordStatsGraph = (data) ->
         ])
 
     options = $.extend(true, {}, basicOptions)  
-    options["series"]["label"] = "Word proficiency"
+    options["series"]["label"] = "Times trained"
     options["series"]["bars"]["lineWidth"] = 0.5
     options["tooltipOpts"]["content"] = tooltipContent3
 
@@ -115,9 +115,9 @@ ready = ->
     totalMin = Math.floor(totalTime / 1000.0 / 60.0)
     totalSec = Math.round(totalTime / 1000.0 % 60.0)
 
-    $('#graph1 .date').html("Training started " + dateStr)
+    $('#graph1 .date').html(dateStr)
     $('#graph1 .totalWords').html(window.data.length + " words")
-    $('#graph1 .totalTime').html("Duration " + totalMin + " min " + totalSec + " sec")
+    $('#graph1 .totalTime').html(totalMin + " min " + totalSec + " sec")
 
     # Graph 1
     data = []
@@ -177,12 +177,12 @@ ready = ->
         style: 'btn-default'
     )
     $('.wordlistpicker').change( ->
-        val = $(@).val().split(' - ')
+        val = $(@).val()
         if window.currentList != val
             window.currentList = val
             changeWordList(val)
     )
-    window.currentList = $('.wordlistpicker').val().split(' - ')
+    window.currentList = $('.wordlistpicker').val()
 
     # LOAD INITIAL GRAPH
     changeWordList()

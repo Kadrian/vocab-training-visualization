@@ -1,115 +1,115 @@
-to bob up;auftauchen
-consent;Zustimmung|Einverständnis
-glum;mürrisch|verdrießlich
-vigorous;energisch|heftig|kräftig
-septon;"Prieser der Sieben"
-veined;aderig|gemasert|marmoriert
-drawled;gedehnt/affektiert (sprechen)
-to be attended by;jmdm. dienen
-padded;gepolstert|ausgestopft|wulstig
-squire;Knappe
-presume;mutmaßen|unterstellen|vorraussetzen
-enameled;emailliert|einbrennlackiert
-juncture;Verbindungspunkt
-gorget;Drosselfleck|Kehlstück
-beak;Horn|Tülle
-corf;Kohlenkorb|Schlepphund
-fidgeting;herumzappelnd
-plaintively;traurig|klagend
-studs;Stollen|Manschettenknöpfe
-honed;fein geschliffen
-cursory;flüchtig|oberflächlich|kursorisch
-to swivel;drehen|schwenken
-leaping;springed
-trout;Forelle
-to plead;verteidigen|hervorbringen|plädieren
-sth. grieves so.;etw. betrübt / bekümmert jdn.
-bowley;Außenhof|Burghof|Vorhof
-litter;Abfall|Müll
-windswept;windgepeitscht
-jut;Vorsprung|Überhang
-jarred;gequietscht|geknattert|erschüttert
-plinth;Sockel|Fußleiste
-staggered;Erstaunt|gestaffelt
-turnip;Rübe|Weißrübe
-hoist;Flaschenzug|Winde|Fahrstuhl
-manure;Stalldung|Dünger|Mist
-thrust;Hieb|Stoß
-hooting;Gejohle
-seize;ergreifen|an sich packen|in Besitz nehmen|erobern
-pelting;niederprasselnd
-to wrench free;sich befreien|sich losreißen
-stains;Flecken
-gorge;Furche|Schlund
-skittish;launisch|nervös|schreckhaft
-mason;Steinmetz
-carpenter;Tischler|Zimmermann
-quarried;herausgebrochen|gehauen
-mare;Stute
-outlaw;Geächteter
-muzzle;Maulkorb|Kanonenrohr|Ausguss
-crest;Gipfel|Kranz|Wappen
-rookery;Kolonie|Krähenhorst
-tended;abgezielt|geneigt|gepflegt
-frail;gebrechlich|zart|zerbrechlich
-mole;Maulwurf|Leberfleck
-wedged;verkeilt|verkantet
-merrily;fröhlich|lustig
-deft;gewandt|geschickt|flink
-tumble;Fall|Sturz|Durcheinander
-mist;Dunst|feiner Nebel
-to proclaim;verkünden|kundtun
-faint;schwach|kraftlos|matt
-decreed;erlassen|verfügt|verordnet
-to tug;reißen|zerren|schleppen
-whiskers;Barthaar|Backenbart|Schnurrhaar
-mummer;so. who celebrates in disguise
-disguise;getarnt|verschleiert
-farce;die Frace|das Affentheater
-vile;widerwärtig|abscheulich|gemein
-turnkey;schlüsselfertig|Schließer|Gefängniswärter
-bristly;borstig|stopplig
-behead;enthaupten|köpfen
-hauled;gezogen|befördert|weggehievt
-ringed;umringed|umgeben
-shrub;Staude|Strauch
-weirwood;Wehr - wood
-doughty;beherzt|mannhaft|tapfer
-coolly;kaltblütig|gelassen
-humpbacked;bucklig
-motley;scheckig|gemischt|zusammengewürfelt
-jest;Spaß|Scherz
-nibble;kleines Stück
-quarrelsome;streitsüchtig
-gout;die Gicht (Krankheit)
-impoverished;verarmt
-suitors;Bewerber|Verehrer|Freier
-ponderous;schwerfällig
-scrubbed;gereinigt|geschrubbt
-concession;Entgegenkommen|Zugeständnis
-to bruise;quetschen|verletzen
-retainer;Festhalte-Ding
-velvet;Bast|Samt
-garbled;entstellt
-vain;eingebildet|aufgeblasen
-timid;schüchtern|furchtsam
-reckless;rücksichtslos|unbekümmert
-squatting;kauernd
-bark;Rinde|Baumrinde
-to smolder;glimmen|glühen
-tuck;Saum|Falte
-pouch;Beutel|Tasche
-toady;Kriecher|Speichellecker
-rasping;feilen
-scrape;Kratzer|Schramme|Schürfwunde
-shrug;Schulternzucken
-precipice;Felshang|Steilhang
-stale;fad|schal|abgestanden
-trencher;Tranchierbrett|Grabenzieher
-grease;Fett|Schmiere|Schmieröl
-fending;abwehrend
-to dog so.;jdn. ständig begleiten
-crofter;Kleinbauer
-lather;Schaum|Seifenschaum
-to prey on sth.;auf etw. jagt machen
-gaoler;Gefängniswärter|Kerkermeister
+auftauchen;to bob up
+Zustimmung|Einverständnis;consent
+mürrisch|verdrießlich;glum
+energisch|heftig|kräftig;vigorous
+"Prieser der Sieben";septon
+aderig|gemasert|marmoriert;veined
+gedehnt/affektiert (sprechen);drawled
+jmdm. dienen;to be attended by
+gepolstert|ausgestopft|wulstig;padded
+Knappe;squire
+mutmaßen|unterstellen|vorraussetzen;presume
+emailliert|einbrennlackiert;enameled
+Verbindungspunkt;juncture
+Drosselfleck|Kehlstück;gorget
+Horn|Tülle;beak
+Kohlenkorb|Schlepphund;corf
+herumzappelnd;fidgeting
+traurig|klagend;plaintively
+Stollen|Manschettenknöpfe;studs
+fein geschliffen;honed
+flüchtig|oberflächlich|kursorisch;cursory
+drehen|schwenken;to swivel
+springed;leaping
+Forelle;trout
+verteidigen|hervorbringen|plädieren;to plead
+etw. betrübt / bekümmert jdn.;sth. grieves so.
+Außenhof|Burghof|Vorhof;bowley
+Abfall|Müll;litter
+windgepeitscht;windswept
+Vorsprung|Überhang;jut
+gequietscht|geknattert|erschüttert;jarred
+Sockel|Fußleiste;plinth
+Erstaunt|gestaffelt;staggered
+Rübe|Weißrübe;turnip
+Flaschenzug|Winde|Fahrstuhl;hoist
+Stalldung|Dünger|Mist;manure
+Hieb|Stoß;thrust
+Gejohle;hooting
+ergreifen|an sich packen|in Besitz nehmen|erobern;seize
+niederprasselnd;pelting
+sich befreien|sich losreißen;to wrench free
+Flecken;stains
+Furche|Schlund;gorge
+launisch|nervös|schreckhaft;skittish
+Steinmetz;mason
+Tischler|Zimmermann;carpenter
+herausgebrochen|gehauen;quarried
+Stute;mare
+Geächteter;outlaw
+Maulkorb|Kanonenrohr|Ausguss;muzzle
+Gipfel|Kranz|Wappen;crest
+Kolonie|Krähenhorst;rookery
+abgezielt|geneigt|gepflegt;tended
+gebrechlich|zart|zerbrechlich;frail
+Maulwurf|Leberfleck;mole
+verkeilt|verkantet;wedged
+fröhlich|lustig;merrily
+gewandt|geschickt|flink;deft
+Fall|Sturz|Durcheinander;tumble
+Dunst|feiner Nebel;mist
+verkünden|kundtun;to proclaim
+schwach|kraftlos|matt;faint
+erlassen|verfügt|verordnet;decreed
+reißen|zerren|schleppen;to tug
+Barthaar|Backenbart|Schnurrhaar;whiskers
+so. who celebrates in disguise;mummer
+getarnt|verschleiert;disguise
+die Frace|das Affentheater;farce
+widerwärtig|abscheulich|gemein;vile
+schlüsselfertig|Schließer|Gefängniswärter;turnkey
+borstig|stopplig;bristly
+enthaupten|köpfen;behead
+gezogen|befördert|weggehievt;hauled
+umringed|umgeben;ringed
+Staude|Strauch;shrub
+Wehr - wood;weirwood
+beherzt|mannhaft|tapfer;doughty
+kaltblütig|gelassen;coolly
+bucklig;humpbacked
+scheckig|gemischt|zusammengewürfelt;motley
+Spaß|Scherz;jest
+kleines Stück;nibble
+streitsüchtig;quarrelsome
+die Gicht (Krankheit);gout
+verarmt;impoverished
+Bewerber|Verehrer|Freier;suitors
+schwerfällig;ponderous
+gereinigt|geschrubbt;scrubbed
+Entgegenkommen|Zugeständnis;concession
+quetschen|verletzen;to bruise
+Festhalte-Ding;retainer
+Bast|Samt;velvet
+entstellt;garbled
+eingebildet|aufgeblasen;vain
+schüchtern|furchtsam;timid
+rücksichtslos|unbekümmert;reckless
+kauernd;squatting
+Rinde|Baumrinde;bark
+glimmen|glühen;to smolder
+Saum|Falte;tuck
+Beutel|Tasche;pouch
+Kriecher|Speichellecker;toady
+feilen;rasping
+Kratzer|Schramme|Schürfwunde;scrape
+Schulternzucken;shrug
+Felshang|Steilhang;precipice
+fad|schal|abgestanden;stale
+Tranchierbrett|Grabenzieher;trencher
+Fett|Schmiere|Schmieröl;grease
+abwehrend;fending
+jdn. ständig begleiten;to dog so.
+Kleinbauer;crofter
+Schaum|Seifenschaum;lather
+auf etw. jagt machen;to prey on sth.
+Gefängniswärter|Kerkermeister;gaoler

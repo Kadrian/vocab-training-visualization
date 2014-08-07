@@ -352,12 +352,12 @@ ready = ->
     )
 
     $('.wordlistpicker').change( ->
-        val = $(@).val().split(' - ')
+        val = $(@).val()
         if window.currentList != val
             window.currentList = val
             loadVocabulary(val)
     )
-    window.currentList = $('.wordlistpicker').val().split(' - ')
+    window.currentList = $('.wordlistpicker').val()
 
     # HANDLE CLICKS / KEYS
     $('#start').click ->

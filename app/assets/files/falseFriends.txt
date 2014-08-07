@@ -1,0 +1,239 @@
+aktuell;current|up-to-date
+alle Tage;every day
+Allee;avenue
+also;so
+Ambulanz;emergency room
+Annonce;advertisement
+arm;poor
+Art;way|sort|kind
+bald;soon
+Bank (zum Setzen);bench
+Barkeeper;bartender
+Beamer;projector
+Bein;leg
+bekommen;to get
+Benzin;petrol|gas
+Billion;trillion
+Bisquit;sponge
+(sich) blamieren;to make a fool of oneself
+blutiges Steak;rare steak
+Bord;shelf
+Boxen;speakers
+Brand;fire
+brav;good|well-behaved|honest
+Brief;letter
+Brieftasche;wallet
+Callboy;male prostitute
+Chance;opportunity
+Chef;boss
+Daten (Computer);data
+defekt;defective|fault|out of order
+delikat;delicious|exquisite
+dementiert;denied|refuted
+Dessert;dessert
+dezent;discreet|modest
+dicke Freunde sein;to be close friends
+Direktion;management
+Direktor (Schule);headteacher|headmaster
+Dom;cathedral
+Dose;can|tin
+dumm;foolish|silly|stupid
+eitel;vain
+egal;to be all the same|identical|to not care
+engagiert;committed
+Enkel;grandchild
+Etikett;label|price tag
+eventuell;possible|possibly
+Fabrik;factory
+fabrizieren;to manufacture|to produce
+Fahrt;journey
+familiär;family
+famos;splendid
+Fantasie (Kreativität);imagination
+fast;almost
+fasten;to fast|etwas schließen
+fatal;disastrous
+Fehler;mistake
+Feuerzeug);lighter
+Fieber;temperature
+Figur;shape|figure
+flattern;to flap|to flutter
+Fleisch (zum Essen);meat
+Flur;hall|hallway
+Formular;form
+Fotograf;photographer
+Fraktion;parliamentary party|group
+Fund;discovery
+Gasthaus;restaurant|pub
+gelehrt;scholary
+genial;brilliant
+Genie;genius
+Gift;poison
+Glanz;glory|shine
+Grund;reason
+Handy;mobile phone 
+hart;hard
+Hausaufgaben;homework
+Hausmeister;caretaker|janitor
+Herd;cooker|stove
+Hochschule;college|university
+Hose;trousers
+human;humane
+Hut;hat
+ich kenne;I know
+Igel;hedgehog
+Influenza|Grippe;flu
+irritieren;to confuse
+isoliert (z.B. Fenster);insulate
+Jalousien;venetian blinds
+Justiz;legal authorities
+Kaffee;coffee
+Komm herunter.;Come down.
+Kaution;bail|deposit
+Keks;biscuit
+Kittchen (Gefängnis) ;prison
+Kollege;colleague
+Konfession;denomination|religion
+konkret;specific
+Konkurrenz;competition
+konsequent;consistent</td>
+konservieren;to preserve
+kontrollieren (überprüfen);to check|to monitor
+Korn;grain
+Kostüm (Mode);suit
+Kraft;strength
+Kritik;criticism
+kurios;strange
+Lack;gloss paint|varnish
+Lager;warehouse|storehouse|depot
+Lake;brine
+Land (Staat);country
+Lektüre;reading
+Limone;lime
+List;trick
+locken;to lure|to entice
+Lohn;wages
+Lyrik;poetry
+Mais;corn
+Manager;chief executive officer (CEO)
+Mappe (Hefter);folder
+Marke;brand
+Marmelade;jam
+massiv;solid
+meinen;think
+Meinung;opinion
+Menü;set meal
+Messe;fair; mass
+Miete;rent
+Minze;mint
+Mist (Stall);dung
+Mittel;mean
+mittelalterlich;medieval
+mobben;to bully
+Mode;fashion
+mondän;fashionable|chic
+Mörder;murderer
+nicht müssen;not to have to
+Musikbox;juke-box
+Note (Zensur);mark
+Notiz;note
+Novelle;novella
+Objektiv;lens
+ordinär;vulgar
+Paket;parcel
+pathetisch;emotional|dramatic|emotive
+Patrone;cartridge
+Pension (Hotel);guest house
+Personal;personnel|staff
+Pest;plague
+Petroleum;paraffin|kerosene
+Physiker;physicist
+Pickel;pimple|spot|zit
+picken;peck
+Platte;slab|platter|record
+plump;clumsy
+prägnant;concise
+Präservativ;condom
+prinzipiell;fundamental
+Probe;rehearsal|sample
+Programm (TV);channel
+Prokurist;attorney
+Promotion;doctorate|PhD
+Prospekt;brochure|leaflet
+Provision;commission
+Prozess (Gericht);trial|legal proceedings
+prüfen;to check
+psychisch;psychological
+Publikum;audience
+Pudding;blancmange
+Quote;rate|proportion
+Rabatt;discount
+Rat;advice
+Rate;instalment
+etwas realisieren;to implement
+Reklamation;complaint
+reklamieren;complain
+rentabel;profitable
+Rente;pension
+resignieren;to give up
+Rezept (Arzt);prescription
+ringen;to wrestle
+Rock;skirt
+Roman;novel
+Rückseite;back
+scharf (Gewürz);hot
+Schellfisch;haddock
+Schlüpfer;panties
+schmal;narrow
+Schmuck;jewelry 
+Schnecke;snail|slug
+Schwarzarbeiter;clandestine worker
+See;lake
+seit 10 Jahren;for 10 years
+Sekt;sparkling wine
+selbstbewusst;self-confident
+senden (TV);to broadcast
+Sense;scythe
+sensibel;sensitive
+seriös;respectable
+Showmaster;host
+Sinn;sense
+Slip;knickers|panties
+Smoking;tuxedo|dinner jacket
+sparen;to save
+Speisen;dishes
+spenden;to donate
+spotten;to mock
+Stadium;stage
+stehen;stand
+still;quiet
+Stoff;material
+streng;strict
+Studium;studies
+Stuhl;chair
+Sucher (Kamera);(view)finder
+Suite;suite
+sympathisch;nice|pleasant|likable
+Tablett;tray
+Thema;subject|topic
+Tramper(in);hitchhiker
+überhören;not to hear s.th. 
+übernehmen;to take over
+übernehmen;to take over
+Unternehmer;entrepreneur|employer
+USB Stick;USB drive
+vital;full of life
+Wall;embankment|rampart
+Wand;wall
+wandern;to walk|to hike
+Warenhaus;department store
+weil;because|as
+weit (entfernt);far
+wer;who
+Weste;waistcoat|cardigan
+ich will;I want (I would like)
+Wimper;eyelash
+winken;to wave
+wo;where
+sich wundern;to be surprised
+Zirkel;pair of compasses
