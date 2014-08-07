@@ -1,239 +1,239 @@
-aktuell;current|up-to-date
-alle Tage;every day
-Allee;avenue
-also;so
-Ambulanz;emergency room
-Annonce;advertisement
-arm;poor
-Art;way|sort|kind
-bald;soon
-Bank (zum Setzen);bench
-Barkeeper;bartender
-Beamer;projector
-Bein;leg
-bekommen;to get
-Benzin;petrol|gas
-Billion;trillion
-Bisquit;sponge
-(sich) blamieren;to make a fool of oneself
-blutiges Steak;rare steak
-Bord;shelf
-Boxen;speakers
-Brand;fire
-brav;good|well-behaved|honest
-Brief;letter
-Brieftasche;wallet
-Callboy;male prostitute
-Chance;opportunity
-Chef;boss
-Daten (Computer);data
-defekt;defective|fault|out of order
-delikat;delicious|exquisite
-dementiert;denied|refuted
-Dessert;dessert
-dezent;discreet|modest
-dicke Freunde sein;to be close friends
-Direktion;management
-Direktor (Schule);headteacher|headmaster
-Dom;cathedral
-Dose;can|tin
-dumm;foolish|silly|stupid
-eitel;vain
-egal;to be all the same|identical|to not care
-engagiert;committed
-Enkel;grandchild
-Etikett;label|price tag
-eventuell;possible|possibly
-Fabrik;factory
-fabrizieren;to manufacture|to produce
-Fahrt;journey
-familiär;family
-famos;splendid
-Fantasie (Kreativität);imagination
-fast;almost
-fasten;to fast|etwas schließen
-fatal;disastrous
-Fehler;mistake
-Feuerzeug);lighter
-Fieber;temperature
-Figur;shape|figure
-flattern;to flap|to flutter
-Fleisch (zum Essen);meat
-Flur;hall|hallway
-Formular;form
-Fotograf;photographer
-Fraktion;parliamentary party|group
-Fund;discovery
-Gasthaus;restaurant|pub
-gelehrt;scholary
-genial;brilliant
-Genie;genius
-Gift;poison
-Glanz;glory|shine
-Grund;reason
-Handy;mobile phone 
-hart;hard
-Hausaufgaben;homework
-Hausmeister;caretaker|janitor
-Herd;cooker|stove
-Hochschule;college|university
-Hose;trousers
-human;humane
-Hut;hat
-ich kenne;I know
-Igel;hedgehog
-Influenza|Grippe;flu
-irritieren;to confuse
-isoliert (z.B. Fenster);insulate
-Jalousien;venetian blinds
-Justiz;legal authorities
-Kaffee;coffee
-Komm herunter.;Come down.
-Kaution;bail|deposit
-Keks;biscuit
-Kittchen (Gefängnis) ;prison
-Kollege;colleague
-Konfession;denomination|religion
-konkret;specific
-Konkurrenz;competition
-konsequent;consistent</td>
-konservieren;to preserve
-kontrollieren (überprüfen);to check|to monitor
-Korn;grain
-Kostüm (Mode);suit
-Kraft;strength
-Kritik;criticism
-kurios;strange
-Lack;gloss paint|varnish
-Lager;warehouse|storehouse|depot
-Lake;brine
-Land (Staat);country
-Lektüre;reading
-Limone;lime
-List;trick
-locken;to lure|to entice
-Lohn;wages
-Lyrik;poetry
-Mais;corn
-Manager;chief executive officer (CEO)
-Mappe (Hefter);folder
-Marke;brand
-Marmelade;jam
-massiv;solid
-meinen;think
-Meinung;opinion
-Menü;set meal
-Messe;fair; mass
-Miete;rent
-Minze;mint
-Mist (Stall);dung
-Mittel;mean
-mittelalterlich;medieval
-mobben;to bully
-Mode;fashion
-mondän;fashionable|chic
-Mörder;murderer
-nicht müssen;not to have to
-Musikbox;juke-box
-Note (Zensur);mark
-Notiz;note
-Novelle;novella
-Objektiv;lens
-ordinär;vulgar
-Paket;parcel
-pathetisch;emotional|dramatic|emotive
-Patrone;cartridge
-Pension (Hotel);guest house
-Personal;personnel|staff
-Pest;plague
-Petroleum;paraffin|kerosene
-Physiker;physicist
-Pickel;pimple|spot|zit
-picken;peck
-Platte;slab|platter|record
-plump;clumsy
-prägnant;concise
-Präservativ;condom
-prinzipiell;fundamental
-Probe;rehearsal|sample
-Programm (TV);channel
-Prokurist;attorney
-Promotion;doctorate|PhD
-Prospekt;brochure|leaflet
-Provision;commission
-Prozess (Gericht);trial|legal proceedings
-prüfen;to check
-psychisch;psychological
-Publikum;audience
-Pudding;blancmange
-Quote;rate|proportion
-Rabatt;discount
-Rat;advice
-Rate;instalment
-etwas realisieren;to implement
-Reklamation;complaint
-reklamieren;complain
-rentabel;profitable
-Rente;pension
-resignieren;to give up
-Rezept (Arzt);prescription
-ringen;to wrestle
-Rock;skirt
-Roman;novel
-Rückseite;back
-scharf (Gewürz);hot
-Schellfisch;haddock
-Schlüpfer;panties
-schmal;narrow
-Schmuck;jewelry 
-Schnecke;snail|slug
-Schwarzarbeiter;clandestine worker
-See;lake
-seit 10 Jahren;for 10 years
-Sekt;sparkling wine
-selbstbewusst;self-confident
-senden (TV);to broadcast
-Sense;scythe
-sensibel;sensitive
-seriös;respectable
-Showmaster;host
-Sinn;sense
-Slip;knickers|panties
-Smoking;tuxedo|dinner jacket
-sparen;to save
-Speisen;dishes
-spenden;to donate
-spotten;to mock
-Stadium;stage
-stehen;stand
-still;quiet
-Stoff;material
-streng;strict
-Studium;studies
-Stuhl;chair
-Sucher (Kamera);(view)finder
-Suite;suite
-sympathisch;nice|pleasant|likable
-Tablett;tray
-Thema;subject|topic
-Tramper(in);hitchhiker
-überhören;not to hear s.th. 
-übernehmen;to take over
-übernehmen;to take over
-Unternehmer;entrepreneur|employer
-USB Stick;USB drive
-vital;full of life
-Wall;embankment|rampart
-Wand;wall
-wandern;to walk|to hike
-Warenhaus;department store
-weil;because|as
-weit (entfernt);far
-wer;who
-Weste;waistcoat|cardigan
-ich will;I want (I would like)
-Wimper;eyelash
-winken;to wave
-wo;where
-sich wundern;to be surprised
-Zirkel;pair of compasses
+current|up-to-date;aktuell
+every day;alle Tage
+avenue;Allee
+so;also
+emergency room;Ambulanz
+advertisement;Annonce
+poor;arm
+way|sort|kind;Art
+soon;bald
+bench;Bank (zum Setzen)
+bartender;Barkeeper
+projector;Beamer
+leg;Bein
+to get;bekommen
+petrol|gas;Benzin
+trillion;Billion
+sponge;Bisquit
+to make a fool of oneself;(sich) blamieren
+rare steak;blutiges Steak
+shelf;Bord
+speakers;Boxen
+fire;Brand
+good|well-behaved|honest;brav
+letter;Brief
+wallet;Brieftasche
+male prostitute;Callboy
+opportunity;Chance
+boss;Chef
+data;Daten (Computer)
+defective|fault|out of order;defekt
+delicious|exquisite;delikat
+denied|refuted;dementiert
+dessert;Dessert
+discreet|modest;dezent
+to be close friends;dicke Freunde sein
+management;Direktion
+headteacher|headmaster;Direktor (Schule)
+cathedral;Dom
+can|tin;Dose
+foolish|silly|stupid;dumm
+vain;eitel
+to be all the same|identical|to not care;egal
+committed;engagiert
+grandchild;Enkel
+label|price tag;Etikett
+possible|possibly;eventuell
+factory;Fabrik
+to manufacture|to produce;fabrizieren
+journey;Fahrt
+family;familiär
+splendid;famos
+imagination;Fantasie (Kreativität)
+almost;fast
+to fast|etwas schließen;fasten
+disastrous;fatal
+mistake;Fehler
+lighter;Feuerzeug)
+temperature;Fieber
+shape|figure;Figur
+to flap|to flutter;flattern
+meat;Fleisch (zum Essen)
+hall|hallway;Flur
+form;Formular
+photographer;Fotograf
+parliamentary party|group;Fraktion
+discovery;Fund
+restaurant|pub;Gasthaus
+scholary;gelehrt
+brilliant;genial
+genius;Genie
+poison;Gift
+glory|shine;Glanz
+reason;Grund
+mobile phone ;Handy
+hard;hart
+homework;Hausaufgaben
+caretaker|janitor;Hausmeister
+cooker|stove;Herd
+college|university;Hochschule
+trousers;Hose
+humane;human
+hat;Hut
+I know;ich kenne
+hedgehog;Igel
+flu;Influenza|Grippe
+to confuse;irritieren
+insulate;isoliert (z.B. Fenster)
+venetian blinds;Jalousien
+legal authorities;Justiz
+coffee;Kaffee
+Come down.;Komm herunter.
+bail|deposit;Kaution
+biscuit;Keks
+prison;Kittchen (Gefängnis) 
+colleague;Kollege
+denomination|religion;Konfession
+specific;konkret
+competition;Konkurrenz
+consistent</td>;konsequent
+to preserve;konservieren
+to check|to monitor;kontrollieren (überprüfen)
+grain;Korn
+suit;Kostüm (Mode)
+strength;Kraft
+criticism;Kritik
+strange;kurios
+gloss paint|varnish;Lack
+warehouse|storehouse|depot;Lager
+brine;Lake
+country;Land (Staat)
+reading;Lektüre
+lime;Limone
+trick;List
+to lure|to entice;locken
+wages;Lohn
+poetry;Lyrik
+corn;Mais
+chief executive officer (CEO);Manager
+folder;Mappe (Hefter)
+brand;Marke
+jam;Marmelade
+solid;massiv
+think;meinen
+opinion;Meinung
+set meal;Menü
+ mass;Messe;fair
+rent;Miete
+mint;Minze
+dung;Mist (Stall)
+mean;Mittel
+medieval;mittelalterlich
+to bully;mobben
+fashion;Mode
+fashionable|chic;mondän
+murderer;Mörder
+not to have to;nicht müssen
+juke-box;Musikbox
+mark;Note (Zensur)
+note;Notiz
+novella;Novelle
+lens;Objektiv
+vulgar;ordinär
+parcel;Paket
+emotional|dramatic|emotive;pathetisch
+cartridge;Patrone
+guest house;Pension (Hotel)
+personnel|staff;Personal
+plague;Pest
+paraffin|kerosene;Petroleum
+physicist;Physiker
+pimple|spot|zit;Pickel
+peck;picken
+slab|platter|record;Platte
+clumsy;plump
+concise;prägnant
+condom;Präservativ
+fundamental;prinzipiell
+rehearsal|sample;Probe
+channel;Programm (TV)
+attorney;Prokurist
+doctorate|PhD;Promotion
+brochure|leaflet;Prospekt
+commission;Provision
+trial|legal proceedings;Prozess (Gericht)
+to check;prüfen
+psychological;psychisch
+audience;Publikum
+blancmange;Pudding
+rate|proportion;Quote
+discount;Rabatt
+advice;Rat
+instalment;Rate
+to implement;etwas realisieren
+complaint;Reklamation
+complain;reklamieren
+profitable;rentabel
+pension;Rente
+to give up;resignieren
+prescription;Rezept (Arzt)
+to wrestle;ringen
+skirt;Rock
+novel;Roman
+back;Rückseite
+hot;scharf (Gewürz)
+haddock;Schellfisch
+panties;Schlüpfer
+narrow;schmal
+jewelry ;Schmuck
+snail|slug;Schnecke
+clandestine worker;Schwarzarbeiter
+lake;See
+for 10 years;seit 10 Jahren
+sparkling wine;Sekt
+self-confident;selbstbewusst
+to broadcast;senden (TV)
+scythe;Sense
+sensitive;sensibel
+respectable;seriös
+host;Showmaster
+sense;Sinn
+knickers|panties;Slip
+tuxedo|dinner jacket;Smoking
+to save;sparen
+dishes;Speisen
+to donate;spenden
+to mock;spotten
+stage;Stadium
+stand;stehen
+quiet;still
+material;Stoff
+strict;streng
+studies;Studium
+chair;Stuhl
+(view)finder;Sucher (Kamera)
+suite;Suite
+nice|pleasant|likable;sympathisch
+tray;Tablett
+subject|topic;Thema
+hitchhiker;Tramper(in)
+not to hear s.th. ;überhören
+to take over;übernehmen
+to take over;übernehmen
+entrepreneur|employer;Unternehmer
+USB drive;USB Stick
+full of life;vital
+embankment|rampart;Wall
+wall;Wand
+to walk|to hike;wandern
+department store;Warenhaus
+because|as;weil
+far;weit (entfernt)
+who;wer
+waistcoat|cardigan;Weste
+I want (I would like);ich will
+eyelash;Wimper
+to wave;winken
+where;wo
+to be surprised;sich wundern
+pair of compasses;Zirkel

@@ -124,7 +124,7 @@ submitAnswer = (answer) ->
 
     # Check correctness
     for back in window.word["back"]
-        if answer == back
+        if answer.toLowerCase() == back.toLowerCase()
             $('#answer-form').removeClass('has-error').addClass('has-success')
 
             window.word["time"] += new Date().getTime() - window.startTime
