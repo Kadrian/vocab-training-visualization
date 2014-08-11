@@ -17,6 +17,8 @@ class StatisticsController < ApplicationController
 
   	@data = data.to_json
   	@name = data.first.name
+    started = Training.where(:training_number => training_number).first()["created_at"].to_s
+    @trainingStarted = started.split('T')[0] + " " + started.split('T')[1].split('.')[0]
 
     @wordlists = WordList.all()
   end
@@ -38,7 +40,8 @@ class StatisticsController < ApplicationController
     subquery = Training.select("trainings.word_id,
       count(trainings.word_id) as timesTrained,
       avg(trainings.time) as avgTime,
-      avg(trainings.trials) as avgTrials").group(:word_id).to_sql
+      avg(trainings.trials) as avgTrials
+      ").group(:word_id).to_sql
 
     words = Word.select("words.*,
       p.timesTrained as \"timesTrained\",

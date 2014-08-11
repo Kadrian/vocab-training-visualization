@@ -8,7 +8,7 @@ h1{
 }
 
 body{
-	padding-top:20px;
+	padding-top: 70px;
 }
 
 #question{
@@ -28,11 +28,29 @@ body{
 	margin-top:0;
 }
 
-#vocab-slide{
-	width:970px;
-	margin: 20px auto;
-	margin-right: 20px;
+.vocab-settings {
+    display:table;
+    border-collapse:collapse;
+    width:100%;
+    div {
+	    display:table-cell;
+	    vertical-align: middle;
+	}
 }
+.vocab-settings-right {
+    width:500px;
+}
+
+.vocab-settings-left{
+    padding-right: 20px;
+}
+
+#vocab-slide{
+	width:100%;
+	// margin: 20px auto;
+	// margin-right: 20px;
+}
+
 .slider-disabled{
 	.slider-selection{
 		background:#AAA !important;
@@ -50,7 +68,7 @@ body{
 }
 
 #numwords-label{
-	margin:0 20px;
+	margin: 0 20px 0 0;
 	display:inline-block;
 	font-size:34px;
 	width:205px;
@@ -65,10 +83,6 @@ body{
 
 #start-form{
 	margin:10px auto;
-}
-
-#exercise{
-	margin-top:50px;
 }
 
 #history{

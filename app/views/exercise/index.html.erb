@@ -13,18 +13,22 @@
 			</select>
 		</div>
 
-		<form class="form-inline" onkeypress="return event.keyCode != 13;">
-			<input id="slider" type="text" class="span4" value="" data-slider-id="vocab-slide">
-			<input type="text" id="min" class="form-control vals">
-			<input type="text" id="max" class="form-control vals">
+		<form class="form-inline vocab-settings" onkeypress="return event.keyCode != 13;">
+			<div class="vocab-settings-left">
+				<input id="slider" type="text" class="span4" value="" data-slider-id="vocab-slide">
+			</div>
+			<div class="vocab-settings-right">
+				<input type="text" id="min" class="form-control vals">
+				<input type="text" id="max" class="form-control vals">
+				<p id="numwords-label"></p>
+				<button id="start" type="button" class="btn btn-primary">Start</button>
+			</div>
 		</form>
+	</div>	
+</div>	
 
-		<form id="start-form" class="form-inline text-right" onkeypress="return event.keyCode != 13;">
-			<p id="numwords-label"></p>
-			<button id="start" type="button" class="btn btn-primary">Start</button>
-		</form>
-
-
+<div class="row">
+	<div class="col-sm-12 text-center">
 		<h1 id="exercise">EXERCISE</h1>
 		<div class="progress text-left">
 		  	<div id="exercise-correct" class="progress-bar progress-bar-success" role="progressbar" style="width:0%;"></div>

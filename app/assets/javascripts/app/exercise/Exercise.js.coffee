@@ -298,6 +298,10 @@ setupSliderInput = (numVocab) ->
         window.wordslider.slider('setAttribute','max', max)
         window.wordslider.slider('setValue', [initMin, initMax])
 
+    # FIX SLIDER WIDTH ISSUE
+    $('#vocab-slide').width($('.vocab-settings-left').width())
+
+    # EVENT REGISTRATION & INPUT SYNCHRONIZATION
     $('#slider').on('slide', ->
         range = $(@).data('slider').getValue()
         $('#min').val(range[0])

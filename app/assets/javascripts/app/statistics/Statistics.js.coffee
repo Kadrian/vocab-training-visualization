@@ -105,17 +105,12 @@ ready = ->
     # --------------------
     # LAST TRAINING
     # --------------------
-    date = window.data[0]["created_at"]
-    "2014-07-31T17:47:10.990Z"
-    dateStr = date.split('T')[0] + " " + date.split('T')[1].split('.')[0]
-
     totalTime = 0
     for w in window.data
         totalTime += w["time"]
     totalMin = Math.floor(totalTime / 1000.0 / 60.0)
     totalSec = Math.round(totalTime / 1000.0 % 60.0)
 
-    $('#graph1 .date').html(dateStr)
     $('#graph1 .totalWords').html(window.data.length + " words")
     $('#graph1 .totalTime').html(totalMin + " min " + totalSec + " sec")
 
