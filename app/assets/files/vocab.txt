@@ -109,9 +109,9 @@ NはN2ですか;N2 (question word) is N?
 さま;master (super-polite)
 お金|おかね;money
 ほんやくしてください;Translate, please!
-れきし;history
+歴史|れきし;history
 けいざい;economy
-いしゃ;doctor
+医者|いしゃ;doctor
 せんもん;specialty (subject of study)
 これ;this
 ペン;pen
@@ -582,3 +582,5 @@ Nについて;about N
 生きる|いきる;to live
 晩ご飯|ばんごはん;dinner
 牛乳|ぎゅうにゅう;milk
+運ぶ|はこぶ;to carry
+安全の手引き|あんぜんのてびき;safety instructions

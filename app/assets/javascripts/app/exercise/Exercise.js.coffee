@@ -132,7 +132,18 @@ submitAnswer = (answer) ->
 
             if not window.repetitionPhase
                 updateExerciseProgress()
-            pushHistory(answer, true)
+
+            window.word['back']
+            
+            # Determine correct alternatives
+            alternatives = $.extend(true, [], window.word["back"])
+            alternatives.splice(alternatives.indexOf(answer), 1)
+
+            if alternatives.length == 0
+                pushHistory(answer, true)
+            else
+                pushHistory(answer, true, "Also: " + alternatives.join(' or '))
+
             nextWord()
             return
 
@@ -234,9 +245,9 @@ pushHistory = (string, isCorrect, solution) ->
         answer = $('<span></span>').html(string).css('color', 'red')
         el.append(answer)
 
-        if solution?
-            sol = $('<span></span>').html(" -- " + solution)
-            el.append(sol)
+    if solution?
+        sol = $('<span></span>').html(" -- " + solution)
+        el.append(sol)
 
     $('#history').prepend(el)
 
