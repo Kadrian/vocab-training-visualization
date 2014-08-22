@@ -4,9 +4,11 @@
 
 <div class="row row-dark">
 	<div class="col-sm-12 text-center">
-		<h1>TRAINING SET</h1>
-		<div class="wordlistpicker-container text-left">
-			<select class="wordlistpicker span12" data-width="30%">
+		
+		<p class="headline">TRAINING SET</p>
+
+		<div class="wordlistpicker-container">
+			<select class="wordlistpicker span12" data-width="500px">
 				<% for list in @wordlists %>
 					<option><%= list.title %></option>
 				<% end %>
@@ -20,36 +22,49 @@
 			<div class="vocab-settings-right">
 				<input type="text" id="min" class="form-control vals">
 				<input type="text" id="max" class="form-control vals">
-				<p id="numwords-label"></p>
-				<button id="start" type="button" class="btn btn-primary">Start</button>
 			</div>
 		</form>
+
+		<div class="row">
+			<div class="col-sm-0 col-lg-4"></div>
+			<div class="col-sm-12 col-lg-4 text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<p id="numwords-label"></p>
+					</div>	
+					<div class="col-sm-6">
+						<button id="start" type="button" class="btn btn-primary">Start</button>
+					</div>	
+				</div>	
+			</div>	
+			<div class="col-sm-0 col-lg-4"></div>
+		</div>	
+
 	</div>	
 </div>	
-
+<hr />
 <div class="row row-light">
 	<div class="col-sm-12 text-center">
-		<h1 id="exercise">EXERCISE</h1>
+		<p class="headline">EXERCISE</p>
 		<div class="progress text-left">
 		  	<div id="exercise-correct" class="progress-bar progress-bar-success" role="progressbar" style="width:0%;"></div>
 			<div id="exercise-wrong" class="progress-bar progress-bar-danger" role="progressbar" style="width:0%"></div>
 			<span id="exercise-label"></span>
 		</div>
-		<h2 id="question" class="text-center"></h2>
 
-		<div class="alert alert-success alert-dismissable" style="display:none;">
-		   	<span id="alert-msg">Oh my god! You've done it!  -  </span>
-			<form id="name-form" class="form-inline" style="display:inline-block" onkeypress="return event.keyCode != 13;">
-		   		<input id="name" class="form-control" type="text" placeholder="What's your name?" />
-		   	</form>
-		   	<button id="awesome-btn" class="btn btn-default">Yes, I'm awesome, reset please!</button>
-		</div>
+		<div class="q-and-a">
+			<h2 id="question" class="text-center"></h2>
 
-		<form class="form-horizontal">
-			<div id="answer-form" class="form-group">
-				<input id="answer" autocomplete="off" type="text" disabled="true" class="span5 form-control input-lg"/>	
+			<div class="alert alert-success alert-dismissable" style="display:none;">
+			   	<span id="alert-msg">Oh my god! You've done it!  -  </span>
+				<form id="name-form" class="form-inline" style="display:inline-block" onkeypress="return event.keyCode != 13;">
+			   		<input id="name" class="form-control" type="text" placeholder="What's your name?" />
+			   	</form>
+			   	<button id="awesome-btn" class="btn btn-default">Yes, I'm awesome, reset please!</button>
 			</div>
-		</form>
+			
+			<input id="answer" autocomplete="off" type="text" disabled="true" class="form-control input-lg"/>	
+		</div>
 
 		<div class="row">
 			<div class="col-sm-6">

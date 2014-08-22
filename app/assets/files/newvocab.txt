@@ -20,7 +20,7 @@
 電池|でんち;battery
 語気|ごき;tone|speaking manner
 野心|やしん|覇気|はき;ambition
-色気|いろけ;shade of color|attraction to opposite sex
+色気|いろけ;shade of color|sex appeal
 どうしたんですか;what's the matter?
 心が動くね|こころがうごくね;that sounds tempting
 動く|うごく;to move|to stir
@@ -28,3 +28,30 @@
 空車|くうしゃ;free taxi
 列車|れっしゃ;train
 車庫|しゃこ;garage
+借ります|かります;to borrow|to rent
+出会い|であい;meeting|encounter
+途中|とちゅう;in the middle of|on the way
+株式会社|かぶしきがいしゃ;public coorporation
+生み出す|うみだす;to invent|to come up with
+世界|せかい;the world
+価値|かち;value
+世界を変える新たな価値を生み出す|せかいをかえるあらたなかちをうみだす;to create new value to change the world
+国内|こくない;domestic
+概要|がいよう;summary|outline
+自動車|じどうしゃ;automobile
+自転車|じてんしゃ;bicycle|bike
+やっぱり;of course|as I thought
+兄はないです|あにはないです;I don't have an older brother
+将来|しょうらい;future
+一番目の絵|いちばんめのえ;the first picture
+海|うみ;the sea
+年を取っている|としをとっている;to be old
+人気な|にんきな;popular
+オリガさんは先生に人気があります;Olga is popular among the teachers
+私は漢字を書く事ができます|わたしはかんじをかくことができます;I can draw Kanji
+賛成です|さんせいです;I agree
+はんたい;I disagree
+先日|せんじつ;a few days ago|the other day
+研究者|けんきゅうしゃ;researcher
+病気|びょうき;sick|ill
+自動|じどう;automatic

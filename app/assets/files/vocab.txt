@@ -584,3 +584,14 @@ Nについて;about N
 牛乳|ぎゅうにゅう;milk
 運ぶ|はこぶ;to carry
 安全の手引き|あんぜんのてびき;safety instructions
+顧客|こきゃく;customer
+だけ;only
+了解です|りょうかいです;OK!|Deal!
+兄弟|きょうだい;brothers and sisters
+中国人|ちゅうごくじん;chinese person
+中国|ちゅうごく;china
+貰う|もらう;to obtain|to receive
+私は一点を貰いました|わたしはいちてんをもらいました;I received a 1.0 (grade)
+景色|けしき;scenery
+景色は美しいです|けしきはうつくしいです;the scenery is beautiful
+言う|いう;to say
