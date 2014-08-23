@@ -55,3 +55,10 @@
 研究者|けんきゅうしゃ;researcher
 病気|びょうき;sick|ill
 自動|じどう;automatic
+病院|びょういん;hospital
+まで;until
+毎月|まいつき;every month
+昨夜|さくや;last night
+ドイツ統一の日は十月三日です|ドイツとういつのひはじゅうがつみっかです;German unification is october, 3rd.
+創業者|そうぎょうしゃ;founder
+

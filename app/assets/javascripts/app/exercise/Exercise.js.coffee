@@ -336,10 +336,12 @@ setupSliderInput = (numVocab) ->
         updateLabelRange(range)
     )
 
+
 loadVocabulary = (wordlist) ->
     payload =
         wordlist: wordlist
 
+    # If wordlist is undefined, ajax will respond with words from the first vocab list
     $.ajax '/exercise/vocab',
         type: 'GET'
         dataType: 'json'
@@ -355,13 +357,8 @@ loadVocabulary = (wordlist) ->
             else
                 console.log "ERROR: No words in your vocabulary."
 
-# ------------------------
-# MAIN
-# ------------------------
-ready = ->
-    loadVocabulary()
 
-    # INIT WORD LISTS
+initWordListPicker = ->
     $('.wordlistpicker').selectpicker(
         style: 'btn-default'
     )
@@ -374,7 +371,8 @@ ready = ->
     )
     window.currentList = $('.wordlistpicker').val()
 
-    # HANDLE CLICKS / KEYS
+
+setupInputEvents = ->
     $('#start').click ->
         if $(@).html() == "Start"
             startTraining()
@@ -390,5 +388,14 @@ ready = ->
             submitAnswer($(@).val())
     )
 
+# ------------------------
+# MAIN
+# ------------------------
+ready = ->
+    loadVocabulary()
+    initWordListPicker()
+    setupInputEvents()
+
+# Turbolink fix
 $(document).ready(ready)
 $(document).on('page:load', ready)
