@@ -56,7 +56,7 @@ class ExerciseController < ApplicationController
   		list = WordList.first
   	end
 
-	@vocab = Word.select('id, back, front').where(:word_list => list)
+	@vocab = Word.select('id, back, front').where(:word_list => list).order(:id)
 	@vocab.each do | w |
 		w["back"] = w["back"].split('|')
 		w["front"] = w["front"].split('|')

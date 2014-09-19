@@ -22,7 +22,7 @@
   </thead>
 
   <tbody>
-    <% @word_list.words.each do |word| %>
+    <% @word_list.words.all.order(:id).each do |word| %>
       <tr>
         <td><%= word.back %></td>
         <td><%= word.front %></td>

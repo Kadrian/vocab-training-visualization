@@ -76,15 +76,7 @@ changeWordList = (wordlist) ->
 
 updateWordStatsGraph = (data) ->
     console.log data
-    # TODO DATA
-    graphData = []
-    for word, i in data
-        graphData.push([i, word["timesTrained"],
-            "back": word["back"]
-            "front": word["front"]
-            "avgTime": word["avgTime"] / 1000.0
-            "avgTrials": word["avgTrials"]
-        ])
+    graphData = aggregate(data)
 
     options = $.extend(true, {}, basicOptions)  
     options["series"]["label"] = "Times trained"
@@ -95,6 +87,45 @@ updateWordStatsGraph = (data) ->
         window.graph3 = $.plot($("#graph3-chart"), [graphData], options)
     else
         updateGraphData(window.graph3, graphData)
+
+
+aggregate = (data) ->
+    # data is a collection of all trainings including word details
+    aggregatedWords = []
+
+    prev = null
+    prev_aggr =
+        "times": []
+        "trials": []
+
+    for word in data
+        if prev? # is not beginning
+            if prev["word_id"] != word["word_id"] # next word is a different word
+                # aggregate and push previous
+                if prev["training_id"]? # has a valid training
+                    aggregatedWords.push([aggregatedWords.length, prev_aggr["times"].length,
+                        "back": prev["word_back"]
+                        "front": prev["word_front"]
+                        "avgTime": (prev_aggr["times"].reduce (x, y) -> x + y) / prev_aggr["times"].length / 1000.0
+                        "avgTrials": (prev_aggr["trials"].reduce (x, y) -> x + y) / prev_aggr["trials"].length
+                    ])
+                    # reset
+                    prev_aggr["times"] = []
+                    prev_aggr["trials"] = []
+                else
+                    aggregatedWords.push([aggregatedWords.length, 0,
+                        "back": word["word_back"]
+                        "front": word["word_front"]
+                        "avgTime": 0
+                        "avgTrials": 0
+                    ])
+
+        prev = word
+        if prev["training_id"]? # has a valid training
+            prev_aggr["times"].push prev["training_time"]
+            prev_aggr["trials"].push prev["training_trials"]
+
+    return aggregatedWords
 
 
 ready = ->

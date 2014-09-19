@@ -349,7 +349,7 @@ NはN2ですか;N2 (question word) is N?
 間|あいだ;between
 休けい|きゅうけい;break
 自分|じぶん;myself
-きのう;yesterday
+昨日|きのう;yesterday
 直す|なおす;to correct
 シャワ;shower
 シャワを浴びる|シャワをあびる;to take a shower
@@ -469,8 +469,8 @@ Nについて;about N
 テスト;test
 せんたく;laundry
 うでどけい;wrist watch
-そうじ;cleaning
-そうじする;to clean
+掃除|そうじ;cleaning
+掃除する|そうじする;to clean
 冬|ふゆ;winter
 夏|なつ;summer
 秋|あき;autumn
@@ -595,3 +595,75 @@ Nについて;about N
 景色|けしき;scenery
 景色は美しいです|けしきはうつくしいです;the scenery is beautiful
 言う|いう;to say
+誕生日|たんじょうび;birthday
+楽しむ|たのしむ;to enjoy (oneself)
+残念です|ざんねんです;What a shame!
+準備する|じゅんびする;to prepare
+よく;often
+暖かい|あたたかい;warm
+寂しい|さびしい;lonely|sad
+全然|ぜんぜん;at all
+湖|みずうみ;lake
+道|みち;street|road
+知らないです|しらないです;I don't know
+寒い|さむい;cold (temperature)
+冷たい|つめたい;cold (things)
+書類|しょるい;document
+勝つ|かつ;to win
+負ける|まける;to lose
+通る|とおる;to pass (sth.)
+国立|こくりつ;national
+博物館|はくぶつかん;museum
+気に入る|きにいる;to suit, to be pleased with
+見物|けんぶつ;sightseeing
+白鳥|はくちょう;swan
+小鳥|ことり;small bird
+帰り|かえり;return
+雨|あめ;rain
+降る|ふる;to fall (rain)
+風|かぜ;wind
+吹く|ふく;to blow|to play a wind instrument
+近く|ちかく;close
+本屋|ほんや;bookstore
+辞典|じてん;dictionary
+まず;first
+鳴く|なく;to sing (bird)
+ざあざあ;sound of pouring rain
+具合|ぐあい;health condition
+悪い|わるい;bad|poor
+直る|なおる;to get well|to be healed
+夕方|ゆうがた;evening
+ひどい;awful
+強い|つよい;strong
+国語|こくご;national language
+国語辞典|こくごじてん;language dictionary
+レモン;lemon
+ミルク;milk (easy)
+プール;pool
+昨夜|さくや;last night
+卒業する|そつぎょうする;to graduate
+今朝|けさ;this morning
+掃除する|そうじする;
+甘い|あまい;sweet
+魚屋|さかなや;fish dealer
+スタジアム;stadium
+分かれる|わかれる;to split|to separate
+天気|てんき;weather
+先々週|せんせんしゅう;two weeks ago
+再来週|さらいしゅう;the week after next
+再来月|さらいげつ;the month after next
+再来年|さらいねん;the year after next
+一昨年|おととし|いっさくねん|;two years ago
+来年|らいねん;next year
+箱根|はこね;Hakone
+奈良|なら;Nara
+まだ;still
+これから;after this
+暗い|くらい;dark
+約束する|やくそくする;to promise
+長い間|ながいあいだ;long interval
+ところで;by the way
+少ない|すくない;small
+スープ|;soup
+おかげさまで;thanks to you
+上手な|じょうずな;skillful

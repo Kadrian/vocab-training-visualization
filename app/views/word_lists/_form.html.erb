@@ -64,7 +64,7 @@
   });
   </script>
   <div id="words">
-    <%= render :partial => "word", :collection => @word_list.words, :as => :word %>
+    <%= render :partial => "word", :collection => @word_list.words.all.order(:id), :as => :word %>
   </div>
 
 
