@@ -15,13 +15,15 @@ class StatisticsController < ApplicationController
   		d["timesTrained"] = Training.group(:word_id).where(:word_id => d.word_id).count()[d.word_id]
   	end
 
-  	@data = data.to_json
-  	@name = data.first.name
+    if data.nil?
+    	@data = data.to_json
+    	@name = data.first.name
 
-    started = Training.where(:training_number => training_number).first()["created_at"].to_s
-    @trainingStarted = started.split('T')[0] + " " + started.split('T')[1].split('.')[0]
+      started = Training.where(:training_number => training_number).first()["created_at"].to_s
+      @trainingStarted = started.split('T')[0] + " " + started.split('T')[1].split('.')[0]
 
-    @wordlists = WordList.all()
+      @wordlists = WordList.all()
+    end
   end
 
   # AJAX GET /statistics/wordListStats

@@ -667,3 +667,4 @@ Nについて;about N
 スープ|;soup
 おかげさまで;thanks to you
 上手な|じょうずな;skillful
+お寺|おてら;temple
