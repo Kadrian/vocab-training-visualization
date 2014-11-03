@@ -40,6 +40,10 @@ startTraining = () ->
     $("#slider").slider('disable')
     $("#start").html('Cancel')
     $("#start").removeClass('btn-primary')
+    $(".row-odd").css('background-color', '#EEE')
+    $(".row-odd").find('.headline').css('color', '#DDD')
+    $("body").css('background-color', '#FFF')
+    $(".row-even").find('.headline').css('color', '#EEE')
     $('#answer').focus()
 
     # TRAINING
@@ -65,6 +69,10 @@ abortTraining = () ->
     $('.alert').hide()
     $("#start").html('Start')
     $("#start").addClass('btn-primary')
+    $(".row-odd").css('background-color', '#FFF')
+    $(".row-odd").find('.headline').css('color', '#EEE')
+    $("body").css('background-color', '#EEE')
+    $(".row-even").find('.headline').css('color', '#DDD')
     $("#answer").attr('placeholder', '')
 
     # TRAINING

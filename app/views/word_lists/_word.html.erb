@@ -2,18 +2,18 @@
   <%= fields_for "word_list[words_attributes]", word, :index => nil do |word_form| %>
     <div class="form-inline">
       <div class="form-group">
-        <div class="col-sm-4">
+        <div class="col-xs-4">
           <%= word_form.hidden_field :id, :value => word_form.object.id %>
           <%= word_form.text_field :back, :class => "form-control input-sm", :placeholder => "back" %>    
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-4">
+        <div class="col-xs-4">
           <%= word_form.text_field :front, :class => "form-control input-sm", :placeholder => "front" %>    
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-4">
+        <div class="col-xs-4">
           <% if word_form.object.id.nil? %>
             <button type="button" class="btn btn-default btn-xs form-btn remove">Remove</button>
           <% else %>

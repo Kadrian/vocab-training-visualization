@@ -20,14 +20,14 @@
 
   <div class="row">
     <div class="form-group">
-      <%= f.label :title, :class => "control-label col-sm-2"%>
-      <div class="col-sm-4">
+      <%= f.label :title, :class => "control-label col-xs-3 col-sm-2"%>
+      <div class="col-xs-9 col-sm-4">
         <%= f.text_field :title, :class => "form-control", :"data-bv-notempty" => true, :"data-bv-notempty-message" => "A title is required" %>
       </div>
     </div>
     <div class="form-group">
-      <%= f.label :author, :class => "control-label col-sm-2" %>
-      <div class="col-sm-4">
+      <%= f.label :author, :class => "control-label col-xs-3 col-sm-2" %>
+      <div class="col-xs-9 col-sm-4">
         <%= f.text_field :author, :class => "form-control", :"data-bv-notempty" => true, :"data-bv-notempty-message" => "An author is required"  %>    
       </div>
     </div>
@@ -44,8 +44,8 @@
 
   <div class="row">
     <div class="form-group">
-      <%= f.label :a_lot_of_words, :class => "control-label col-sm-2"%>
-      <div class="col-sm-4">
+      <%= f.label :a_lot_of_words, :class => "control-label col-xs-2"%>
+      <div class="col-xs-4">
         <textarea placeholder="optional" id="word_list_words_text" name="word_list[a_lot_of_words]" class="form-control" style="height:200px;"></textarea>
       </div>
     </div>
