@@ -134,7 +134,7 @@ body{
 }
 
 .progress{
-	overflow:visible;
+	overflow:hidden;
 }
 
 .progress-bar {
@@ -145,7 +145,7 @@ body{
 
 #exercise-label{
 	float:left;
-	position:absolute;
+	position:relative;
 	margin-left:5px;	
 }
 
