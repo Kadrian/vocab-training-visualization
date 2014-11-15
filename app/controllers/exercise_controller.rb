@@ -11,7 +11,12 @@ class ExerciseController < ApplicationController
 	name = params["name"]
 
 	# Increment to get a fresh training number
-	training_number = Training.maximum('training_number') + 1
+	training_number = Training.maximum('training_number')
+	if training_number.nil?
+		training_number = 0
+	else
+		trianing_number += 1
+	end
 
 	for training in data
 		word = Word.where({:front => training["front"].join('|'), :back => training["back"].join('|')}).first

@@ -11,7 +11,7 @@
 }
 
 #start{
-	width:140px;
+	width:100%;
 }
 
 .q-and-a{
@@ -25,6 +25,16 @@
 	p:first-child{
 		font-size: 20px;
 	}
+}
+
+#numwords-label{
+	font-size: 26px;
+}
+
+#name-form{
+	margin: 10px 0;
+	width:100%;
+	display:block;
 }
 
 }

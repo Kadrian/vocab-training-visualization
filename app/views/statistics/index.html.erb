@@ -35,10 +35,10 @@
 
 			<h1>Overall statistics</h1>	
 			<div class="wordlistpicker-container text-left">
-				<select class="wordlistpicker span12" data-width="30%">
-						<% for list in @wordlists %>
-							<option><%= list.title %></option>
-						<% end %>
+				<select class="wordlistpicker span12">
+					<% for list in @wordlists %>
+						<option><%= list.title %></option>
+					<% end %>
 				</select>
 			</div>
 			<div id="graph3-chart" style="width:100%; height:300px; margin: 0 auto;"></div>

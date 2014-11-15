@@ -71,7 +71,7 @@ abortTraining = () ->
     $("#max").prop('disabled', false)
     $(".wordlistpicker").prop('disabled', false)
     $(".wordlistpicker").selectpicker('refresh')
-    $('#answer-form').show()
+    $('#answer').show()
     $("#answer").prop('disabled', true)
     $("#slider").slider('enable')
     $('.alert').hide()
@@ -93,7 +93,6 @@ abortTraining = () ->
     $('#history').html("")
     $('#report').html("")
     $('#answer').val("")
-    $('#answer-form').removeClass("has-error").removeClass('has-success')
     $('#question').css('color', 'black')
 
 endTraining = () ->
@@ -111,8 +110,10 @@ endTraining = () ->
             report = $('<p></p>').html(back + " - " + front)
             $('#report').append(report)
 
-        $('#answer-form').hide()
+        $('#answer').hide()
+
         $('.alert').show()
+        $('#name').focus()
     else
         # START REPETITION
         window.repetitionPhase = true
@@ -127,7 +128,6 @@ exitReadyPhase = () ->
     window.readyphase = false
     $('#answer').attr('placeholder', '')
     $('#answer').val('')
-    $('#answer-form').removeClass("has-error").removeClass('has-success')
     $('#question').css('color', 'black')
 
 submitAnswer = (answer) ->
@@ -145,7 +145,6 @@ submitAnswer = (answer) ->
     # Check correctness
     for back in window.word["back"]
         if answer.toLowerCase() == back.toLowerCase()
-            $('#answer-form').removeClass('has-error').addClass('has-success')
 
             window.word["time"] += new Date().getTime() - window.startTime
             window.doneWords.push(window.word)
@@ -167,8 +166,6 @@ submitAnswer = (answer) ->
             nextWord()
             return
 
-    $('#answer-form').removeClass('has-success').addClass('has-error')
-
     handleWrong(answer)
 
 
@@ -177,7 +174,6 @@ handleWrong = (answer) ->
     window.word["trials"]++
 
     if window.currentTrials > allowedTrials
-        $('#answer-form').removeClass('has-error')
         $('#question').css('color', 'red')
 
         window.word["time"] += new Date().getTime() - window.startTime

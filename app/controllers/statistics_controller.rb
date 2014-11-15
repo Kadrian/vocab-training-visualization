@@ -15,8 +15,8 @@ class StatisticsController < ApplicationController
   		d["timesTrained"] = Training.group(:word_id).where(:word_id => d.word_id).count()[d.word_id]
   	end
 
-    if data.nil?
-    	@data = data.to_json
+    if not data.blank?
+  	  @data = data.to_json
     	@name = data.first.name
 
       started = Training.where(:training_number => training_number).first()["created_at"].to_s
