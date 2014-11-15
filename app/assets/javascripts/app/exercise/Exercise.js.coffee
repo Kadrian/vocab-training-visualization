@@ -46,9 +46,16 @@ startTraining = () ->
     $("body").css('background-color', '#FFF')
     $(".row-even").find('.headline').css('color', '#EEE')
     $('#answer').focus()
+    $('.vocab-settings').fadeOut('fast')
+    $('.wordlistpicker-container').fadeOut('fast', ->
+        $('.info').fadeIn('fast')
+    )
 
     # TRAINING
     range = $('#slider').data('slider').getValue()
+    $('.info-text').html('Words ' + range[0] + " - " + range[1] + 
+        ' from <span class="wordlist">' + window.currentList + '</span>'
+    )
     window.words = window.vocab.slice(range[0], range[1])
     window.trainingAmount = window.words.length
     window.repeatWords = []
@@ -76,6 +83,9 @@ abortTraining = () ->
     $("body").css('background-color', '#EEE')
     $(".row-even").find('.headline').css('color', '#DDD')
     $("#answer").attr('placeholder', '')
+    $('.vocab-settings').show()
+    $('.wordlistpicker-container').show()
+    $('.info').hide()
 
     # TRAINING
     resetExerciseProgress()
