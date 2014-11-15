@@ -15,7 +15,7 @@ class ExerciseController < ApplicationController
 	if training_number.nil?
 		training_number = 0
 	else
-		trianing_number += 1
+		training_number += 1
 	end
 
 	for training in data
