@@ -13,12 +13,9 @@
   <tbody>
     <% @word_lists.each do |word_list| %>
       <tr>
-        <td><%= word_list.title %></td>
+        <td><%= link_to word_list.title, word_list %></td>
         <td><%= word_list.author %></td>
         <td><%= word_list.words.count %></td>
-        <td><%= link_to 'Show', word_list, :class => "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Edit', edit_word_list_path(word_list), :class => "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Destroy', word_list, :class => "btn btn-default btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

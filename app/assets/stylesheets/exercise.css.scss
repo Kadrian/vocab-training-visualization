@@ -19,6 +19,16 @@ body{
 	background-color: #EEE;
 }
 
+table{
+	a{
+		text-decoration: underline;
+		&:hover{
+			color:#999;
+			background-color:transparent;
+		}
+	}
+	
+}
 .info{
 	display:none;
 	.wordlist{

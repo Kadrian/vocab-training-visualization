@@ -1,3 +1,5 @@
 <h1>Editing word list</h1>
-
+	
 <%= render 'form' %>
+
+<%= button_to 'Delete this word list', @word_list, :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>

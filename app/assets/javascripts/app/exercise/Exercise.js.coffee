@@ -408,6 +408,7 @@ setupInputEvents = ->
 # MAIN
 # ------------------------
 ready = ->
+    window.wordslider = null
     loadVocabulary()
     initWordListPicker()
     setupInputEvents()
