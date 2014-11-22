@@ -7,7 +7,6 @@ allowedTrials = 2
 progressCorrect = '#exercise-correct'
 progressWrong = '#exercise-wrong'
 historyLength = 10
-defaultWordNum = 10
 
 # ------------------------
 # TRAINING
@@ -122,7 +121,7 @@ endTraining = () ->
 
 enterReadyPhase = () ->
     window.readyphase = true
-    $('#answer').attr('placeholder', 'Ready? (Press Enter)')
+    $('#answer').attr('placeholder', 'Ready? (Press Return)')
 
 exitReadyPhase = () ->
     window.readyphase = false
@@ -302,9 +301,7 @@ updateLabel = (html) ->
 setupSliderInput = (numVocab) ->
     min = 0
     max = numVocab
-    initMin = 0
-    if numVocab > defaultWordNum
-        initMin = numVocab - defaultWordNum 
+    initMin = Math.floor(numVocab / 2)
     initMax = numVocab
     updateLabelRange([initMin, initMax])
 
